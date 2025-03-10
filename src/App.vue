@@ -1,6 +1,6 @@
 <template>
-  <TopNavBar></TopNavBar>
-  <HomePage></HomePage>
+  <top-nav-bar></top-nav-bar>
+  <home-page></home-page>
 </template>
 
 <script>
