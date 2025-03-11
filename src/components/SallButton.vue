@@ -1,6 +1,6 @@
 <template>
     <a :href="seleUrl">
-        <input type="button" class="sall-btn" :value="btnTextValue" />
+        <input type="button" class="btn-input" :value="btnTextValue" />
     </a>
 </template>
 
@@ -44,8 +44,8 @@ export default {
 }
 </script>
 
-<style>
-.sall-btn {
+<style scoped>
+.btn-input {
     background: v-bind(btnBgColor);
     color: v-bind(btnTextColor);
     min-width: 230px;
@@ -56,7 +56,7 @@ export default {
     font-size: 24px;
     box-shadow: 1px 1px 2px lightslategray;
 }
-.sall-btn:hover {
+.btn-input:hover {
     transform: scale(0.98);
     box-shadow: none;
     cursor: pointer;

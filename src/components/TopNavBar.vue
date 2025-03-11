@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .top-nav-bar-container {
     display: flex;
     justify-content: center;

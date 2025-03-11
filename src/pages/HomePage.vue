@@ -7,10 +7,7 @@
             <h1>Descubra Como Cuidar da Sua <span class="green-highlight">Saúde</span> e Lidar Com a <span class="red-highlight">Enxaqueca</span></h1>
             <p>Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
             <p>Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
-            <sall-button
-              class=".sall-btn"
-              :btnTextValue="label.btnSec1"
-            />
+            <sall-button :btnTextValue="label.btnSec1" />
           </div>
           <div class="image-box">
             <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
@@ -52,7 +49,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .home-view-container {
   /* Definições gerais */
 }
@@ -94,6 +91,9 @@ section {
 }
 .text-box .sall-btn {
   margin-top: 200px;
+}
+#btn-sec {
+  margin-top: 450px;
 }
 .image-box {
   display: flex;
