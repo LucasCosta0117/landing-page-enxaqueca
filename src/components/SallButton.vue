@@ -23,7 +23,7 @@ export default {
          */
         btnBgColor: {
             type: String,
-            default: '#DE0000'
+            default: '#000000'
         },
         /**
          * Texto exibido no botão
@@ -48,13 +48,14 @@ export default {
 .btn-input {
     background: v-bind(btnBgColor);
     color: v-bind(btnTextColor);
-    min-width: 230px;
-    height: 45px;
-    padding: 10px;
+    font-size: 1rem;
+    min-width: 7.5rem;
+    max-width: 10;
+    height: 2.75rem;
+    padding: 0.5rem;
     border: none;
-    border-radius: 3px;
-    font-size: 24px;
-    box-shadow: 1px 1px 2px lightslategray;
+    border-radius: 0.1875rem;
+    box-shadow: 0.0625rem 0.0625rem 0.125rem lightslategray;
 }
 .btn-input:hover {
     transform: scale(0.98);

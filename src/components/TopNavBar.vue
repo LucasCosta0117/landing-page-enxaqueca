@@ -2,7 +2,7 @@
   <nav class="top-nav-bar-container">
     <div class="nav-content">
       <div class="logo-box">
-        <font-awesome-icon icon="stethoscope" size="3x" fade style="color: green"/>
+        <font-awesome-icon icon="stethoscope" size="2x" fade style="color: green"/>
       </div>
       <div class="btn-box">
         <sall-button/>
@@ -37,7 +37,9 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80px;
+    max-width: 480px;
+    margin: 0 auto;
+    height: 3rem;
     box-shadow: 0px 1px 5px rgba(71, 71, 71, 0.8);
     background: #2D2F31;
     position: fixed;

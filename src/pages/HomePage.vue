@@ -1,22 +1,25 @@
 <template>
   <div class="home-view-container">
     <div class="home-content">
-      <section id="section-01">
-        <div class="section-content">
-          <div class="text-box">
-            <h1>Descubra Como Cuidar da Sua <span class="green-highlight">Saúde</span> e Lidar Com a <span class="red-highlight">Enxaqueca</span></h1>
-            <p>Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
-            <p>Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
+      <section id="section1" class="section-content">
+        <div class="text-box">
+          <h1>Descubra Como Cuidar da Sua <span class="green-highlight">Saúde</span> e Lidar Com a <span class="red-highlight">Enxaqueca</span></h1>
+          <p>Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
+          <p>Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
+          <div class="btn-input">
             <sall-button :btnTextValue="label.btnSec1" />
           </div>
-          <div class="image-box">
-            <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
-          </div>
+        </div>
+        <div class="image-box">
+          <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
         </div>
       </section>
       <section id="section-02" class="section-content">
         test
       </section>
+    </div>
+    <div class="footer-content">
+      Rodapé
     </div>
   </div>
 </template>
@@ -40,7 +43,11 @@ export default {
           label: {
             btnSec1:'QUERO MEU EBOOK AGORA'
           },
+          /**
+           * Cor para os botões de download durante as seções
+           */
           colorBtn: {
+            btnSec1: '#DE0000',
             btnSec2: '#6DD19D'
           }
         }
@@ -51,58 +58,41 @@ export default {
 
 <style scoped>
 .home-view-container {
-  /* Definições gerais */
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
 }
-.home-content {
-  /* Def dos conteúdos, largura máxima e etc */
-}
-section {
-  display: flex;
-  justify-content: center;
-}
-#section-01 {
+#section1 {
   background-image: url('../assets/images/bg-01.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
-  padding-top: 80px; /* afastar o conteúdo principal da nav-bar*/
 }
 .section-content {
   display: flex;
-  flex-direction: row;
-  width: 1640px;
-  padding: 0px 20px;
-}
-.text-box {
-  width: 780px;
-  height: 100%;
-  margin-right: 20px;
+  flex-direction: column;
+  padding: 0 1.25rem;
 }
 .text-box h1 {
-  margin-top: 100px;
-  font-size: 48px;
-  font-weight: 600;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
 }
 .text-box p {
-  font-size: 24px;
-  font-weight: 300;
-  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
 }
-.text-box .sall-btn {
-  margin-top: 200px;
-}
-#btn-sec {
-  margin-top: 450px;
+.text-box .btn-input {
+  margin-top: 1.5rem;
 }
 .image-box {
   display: flex;
-  align-items: flex-end;
-  height: 100%;
+  justify-content: center;
 }
 .image-box img {
-  max-width: 100%;
-  height: 720px;
+  margin-top: 3rem;
+  width: 80%;
 }
 .green-highlight {
   color: green;
