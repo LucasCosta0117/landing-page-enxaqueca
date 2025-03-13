@@ -3,14 +3,26 @@
     <div class="home-content">
       <section id="section1" class="section-content">
         <div class="text-box">
-          <h1>Descubra Como Cuidar da Sua <span class="green-highlight">Saúde</span> e Lidar Com a <span class="red-highlight">Enxaqueca</span></h1>
+          <!-- <h1>Descubra Como Cuidar da Sua <span class="green-highlight">Saúde</span> e Lidar Com a <span class="red-highlight">Enxaqueca</span></h1> -->
+          <h1>Descubra Como Cuidar da Sua Saúde e Lidar Com a Enxaqueca</h1>
           <p>Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
           <p>Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
           <div class="btn-input">
-            <sall-button :btnTextValue="label.btnSec1" />
+            <sall-button 
+              :btnTextValue="label.btnSec1"
+              :btnBgColor="colorBtn.btnSec1"
+            />
           </div>
         </div>
         <div class="image-box">
+          <div class="image-box-icon">
+            <span>
+              <font-awesome-icon icon="circle" size="2x" beat style="color: #de000030"/>
+            </span>
+            <span>
+              <font-awesome-icon icon="circle" size="2x" beat style="color: #de000030"/>
+            </span>
+          </div>
           <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
         </div>
       </section>
@@ -41,14 +53,14 @@ export default {
            * Legendas para botões/inputs
            */
           label: {
-            btnSec1:'QUERO MEU EBOOK AGORA'
+            btnSec1:'BAIXAR E-BOOK AGORA'
           },
           /**
            * Cor para os botões de download durante as seções
            */
           colorBtn: {
-            btnSec1: '#DE0000',
-            btnSec2: '#6DD19D'
+            btnSec1: '#007d48',
+            btnSec2: '#DE0000'
           }
         }
     }
@@ -80,7 +92,7 @@ export default {
 }
 .text-box p {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 1rem;
 }
 .text-box .btn-input {
@@ -89,10 +101,23 @@ export default {
 .image-box {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .image-box img {
   margin-top: 3rem;
   width: 80%;
+}
+.image-box-icon {
+  position: absolute;
+  top: 22%;
+  left: 38%;
+}
+.image-box-icon span:first-of-type{
+  padding-right: 1.25em;
+}
+.image-box-icon .fa-beat {
+  animation-duration: 2s;
 }
 .green-highlight {
   color: green;
