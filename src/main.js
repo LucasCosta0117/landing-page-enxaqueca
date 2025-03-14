@@ -3,11 +3,12 @@ import App from './App.vue'
 import './assets/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import { faStethoscope } from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faMedrt } from '@fortawesome/free-brands-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faDownload, faStethoscope, faCircle);
+library.add(faCircle, faMedrt, faEye, faNotesMedical);
 
 createApp(App)
     .component('FontAwesomeIcon', FontAwesomeIcon)

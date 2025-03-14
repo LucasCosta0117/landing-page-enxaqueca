@@ -3,10 +3,9 @@
     <div class="home-content">
       <section id="section1" class="section-content">
         <div class="text-box">
-          <!-- <h1>Descubra Como Cuidar da Sua <span class="green-highlight">Saúde</span> e Lidar Com a <span class="red-highlight">Enxaqueca</span></h1> -->
-          <h1>Descubra Como Cuidar da Sua Saúde e Lidar Com a Enxaqueca</h1>
-          <p>Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
-          <p>Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
+          <h1 class="main-title">Descubra Como Cuidar da Sua Saúde e Lidar Com a Enxaqueca</h1>
+          <p class="paragraph-text">Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
+          <p class="paragraph-text">Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
           <div class="btn-input">
             <sall-button 
               :btnTextValue="label.btnSec1"
@@ -17,17 +16,31 @@
         <div class="image-box">
           <div class="image-box-icon">
             <span>
-              <font-awesome-icon icon="circle" size="2x" beat style="color: #de000030"/>
+              <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat style="color: #de000030"/>
             </span>
             <span>
-              <font-awesome-icon icon="circle" size="2x" beat style="color: #de000030"/>
+              <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat style="color: #de000030"/>
             </span>
           </div>
           <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
         </div>
       </section>
-      <section id="section-02" class="section-content">
-        test
+      <section id="section2" class="section-content">
+        <h2 class="section-title">O Que Você Vai Aprender:</h2>
+        <div class="simple-tip-card-box">
+          <simple-tip-card
+            iconName="fa-solid fa-eye"
+            textCard="Como reconhecer os gatilhos das crises"
+          />
+          <simple-tip-card
+          textCard="Estratégias práticas para reduzir os episódios de dor"
+          iconName="fa-solid fa-notes-medical"
+          />
+          <simple-tip-card
+            textCard="Quando buscar ajuda médica e identificar profissionais realmente competentes"
+            iconName="fa-brands fa-medrt"
+          />
+        </div>
       </section>
     </div>
     <div class="footer-content">
@@ -37,7 +50,8 @@
 </template>
 
 <script>
-import SallButton from '../components/SallButton.vue'
+import SallButton from '@/components/SallButton.vue'
+import SimpleTipCard from '@/components/SimpleTipCard.vue';
 
 /**
  * Responsável por organizar todo o conteúdo da landing page
@@ -45,7 +59,8 @@ import SallButton from '../components/SallButton.vue'
 export default {
     name: 'HomePage',
     components: {
-      SallButton
+      SallButton,
+      SimpleTipCard,
     },
     data() {
         return {
@@ -85,18 +100,22 @@ export default {
   flex-direction: column;
   padding: 0 1.25rem;
 }
-.text-box h1 {
+.main-title {
   font-size: 2.25rem;
   font-weight: 700;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
-.text-box p {
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+.paragraph-text {
   font-size: 1.5rem;
   font-weight: 500;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .text-box .btn-input {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
 }
 .image-box {
   display: flex;
@@ -105,24 +124,30 @@ export default {
   position: relative;
 }
 .image-box img {
-  margin-top: 3rem;
   width: 80%;
 }
 .image-box-icon {
   position: absolute;
-  top: 22%;
+  top: 12%;
   left: 38%;
 }
 .image-box-icon span:first-of-type{
-  padding-right: 1.25em;
+  padding-right: 1.25rem;
 }
 .image-box-icon .fa-beat {
-  animation-duration: 2s;
+  animation-duration: 2.5s;
 }
-.green-highlight {
-  color: green;
+#section2 {
+  background-color: #2D2F31;
 }
-.red-highlight {
-  color: #DE0000;
+#section2 .section-title{
+  color: #ffffff;
+  margin: 1rem 0;
+}
+.simple-tip-card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
 </style>

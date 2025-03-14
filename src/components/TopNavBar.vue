@@ -2,7 +2,7 @@
   <nav class="top-nav-bar-container">
     <div class="nav-content">
       <div class="logo-box">
-        <font-awesome-icon icon="stethoscope" size="2x" fade style="color: green"/>
+        <font-awesome-icon icon="fa-circle" size="2x" fade style="color: green"/>
       </div>
       <div class="btn-box">
         <sall-button/>
