@@ -83,7 +83,7 @@ export default {
     height: 50%;
 }
 .tip-card-text {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 400;
     margin-top: 1rem;
     text-align: center;

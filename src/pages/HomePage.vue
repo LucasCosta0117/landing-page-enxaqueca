@@ -42,6 +42,27 @@
           />
         </div>
       </section>
+      <section id="section3" class="section-content">
+        <h2 class="section-title">Pare de Cair Nas Ciladas dos "Gurus de Internet"</h2>
+        <div class="quote-card-box">
+          <quote-card 
+            textCard="Toma um chá disso que resolve!"
+          />
+          <quote-card
+            textCard="Ah, larga o celular que vai melhorar!"
+          />
+          <p class="paragraph-text">
+            Você não precisa de mais palpites sem fundamento.
+            Precisa de conhecimento claro, direto e confiável para cuidar melhor de si.
+          </p>
+          <div class="btn-input">
+            <sall-button 
+              :btnTextValue="label.btnSec1"
+              :btnBgColor="colorBtn.btnSec2"
+            />
+          </div>
+        </div>
+      </section>
     </div>
     <div class="footer-content">
       Rodapé
@@ -52,6 +73,7 @@
 <script>
 import SallButton from '@/components/SallButton.vue'
 import SimpleTipCard from '@/components/SimpleTipCard.vue';
+import QuoteCard from '@/components/QuoteCard.vue';
 
 /**
  * Responsável por organizar todo o conteúdo da landing page
@@ -61,6 +83,7 @@ export default {
     components: {
       SallButton,
       SimpleTipCard,
+      QuoteCard
     },
     data() {
         return {
@@ -68,7 +91,7 @@ export default {
            * Legendas para botões/inputs
            */
           label: {
-            btnSec1:'BAIXAR E-BOOK AGORA'
+            btnSec1:'ADQUIRIR O E-BOOK AGORA'
           },
           /**
            * Cor para os botões de download durante as seções
@@ -145,6 +168,19 @@ export default {
   margin: 1rem 0;
 }
 .simple-tip-card-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+#section3 {
+  background-color: #007d48;
+}
+#section3 .section-title {
+  color: #000000;
+  margin: 1rem 0;
+}
+.quote-card-box {
   display: flex;
   flex-direction: column;
   gap: 2rem;
