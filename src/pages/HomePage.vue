@@ -1,7 +1,7 @@
 <template>
   <div class="home-view-container">
     <div class="home-content">
-      <section id="section1" class="section-content">
+      <section class="section-content bg-img-01">
         <div class="text-box">
           <h1 class="main-title">Descubra Como Cuidar da Sua Saúde e Lidar Com a Enxaqueca</h1>
           <p class="paragraph-text">Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
@@ -25,8 +25,8 @@
           <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
         </div>
       </section>
-      <section id="section2" class="section-content">
-        <h2 class="section-title">O Que Você Vai Aprender:</h2>
+      <section class="section-content bg-black">
+        <h2 class="section-title text-white">O Que Você Vai Aprender:</h2>
         <div class="simple-tip-card-box">
           <simple-tip-card
             iconName="fa-solid fa-eye"
@@ -42,7 +42,7 @@
           />
         </div>
       </section>
-      <section id="section3" class="section-content">
+      <section class="section-content bg-green">
         <h2 class="section-title">Pare de Cair Nas Ciladas dos "Gurus de Internet"</h2>
         <div class="quote-card-box">
           <quote-card 
@@ -51,17 +51,69 @@
           <quote-card
             textCard="Ah, larga o celular que vai melhorar!"
           />
-          <p class="paragraph-text">
+          <p class="paragraph-text text-white">
             Você não precisa de mais palpites sem fundamento.
             Precisa de conhecimento claro, direto e confiável para cuidar melhor de si.
           </p>
-          <div class="btn-input">
-            <sall-button 
-              :btnTextValue="label.btnSec1"
-              :btnBgColor="colorBtn.btnSec2"
-            />
-          </div>
         </div>
+      </section>
+      <section class="section-content bg-img-02">
+        <h2 class="section-title">A Verdade Que Ninguém Conta:</h2>
+        <p class="paragraph-text">
+          A enxaqueca não é só uma questão de "tomar remédio".
+          Ela envolve entender como alimentação, sono, estresse e emoções influenciam sua saúde
+        </p>
+        <p class="paragraph-text">
+          <span class="text-emphasis">O problema?</span>
+        </p>
+        <p class="paragraph-text">
+          Muitas vezes, você sai da consulta com uma prescrição genérica e sem orientação clara.
+        </p>
+        <p class="paragraph-text">
+          Mas com as <span class="text-emphasis">estratégias certas</span>, você pode começar a transformar sua relação com essas dores.
+        </p>
+        <p class="paragraph-text">
+          Pegue agora as informações essenciais para:
+        </p>
+        <div class="bullet-box">
+          <bullet-item
+            text="Reconhecer os sinais do seu corpo."
+          />
+          <bullet-item
+            text="Fazer escolhas que melhoram seu bem-estar."
+          />
+          <bullet-item
+            text="Saber como escolher um médico que realmente te escute."
+          />
+        </div>
+        <p class="paragraph-text">
+          Dê o primeiro passo para viver sem se sentir refém da dor.
+        </p>
+        <div class="btn-input">
+          <sall-button 
+            :btnTextValue="label.btnSec2"
+            :btnBgColor="colorBtn.btnSec2"
+          />
+        </div>
+      </section>
+      <section class="section-content bg-black">
+        <div class="title-icon">
+          <font-awesome-icon :icon="['fas', 'clipboard-list']" size="3x" style="color: #cb6301;" />
+          <h2 class="section-title text-white">O QUE VOCÊ ENCONTRARÁ NO EBOOK</h2>
+        </div>
+        <p class="paragraph-text text-white">
+          1- VOCÊ NÃO ESTÁ SÓ (QUANTAS PESSOAS SOFREM COM ENXAQUECA NO BRASIL?
+          2- COMO EU SEI QUE SOFRO DE ENXAQUECA? (DEFINIÇÃO E DIAGNÓSTICO)
+          3- QUAL TIPO DE ENXAQUECA ME ATINGE? (CLASSIFICAÇÃO DA ENXAQUECA)
+          4- COMO ME CURAR? (HÁ CURA PARA A ENXAQUECA?)
+          5- COMO TRATAR? (CONTROLE DA ENXAQUECA)
+          6- QUAIS HÁBITOS DE VIDA PODEM ME AJUDAR? (TRATAMENTOS SEM USO DE MEDICAMENTOS)
+          7- PRECISO MESMO DE ALGUM REMÉDIO? (TRATAMENTOS COM USO DE MEDICAMENTOS)
+          8- ACOMPANHAMENTO PSICOLÓGICO
+          9- CONHECIMENTOS BÁSICOS PARA A AUTOAVALIAÇÃO E ACOMPANHAMENTO
+          10- COMO IDENTIFICAR UM BOM MÉDICO?
+          11- BÔNUS
+        </p>
       </section>
     </div>
     <div class="footer-content">
@@ -74,6 +126,7 @@
 import SallButton from '@/components/SallButton.vue'
 import SimpleTipCard from '@/components/SimpleTipCard.vue';
 import QuoteCard from '@/components/QuoteCard.vue';
+import BulletItem from '@/components/BulletItem.vue';
 
 /**
  * Responsável por organizar todo o conteúdo da landing page
@@ -83,7 +136,8 @@ export default {
     components: {
       SallButton,
       SimpleTipCard,
-      QuoteCard
+      QuoteCard,
+      BulletItem
     },
     data() {
         return {
@@ -91,14 +145,15 @@ export default {
            * Legendas para botões/inputs
            */
           label: {
-            btnSec1:'ADQUIRIR O E-BOOK AGORA'
+            btnSec1:'ADQUIRIR O E-BOOK AGORA',
+            btnSec2:'QUERO DAR O PRIMEIRO PASSO'
           },
           /**
            * Cor para os botões de download durante as seções
            */
           colorBtn: {
             btnSec1: '#007d48',
-            btnSec2: '#DE0000'
+            btnSec2: '#0917c1'
           }
         }
     }
@@ -112,11 +167,23 @@ export default {
   max-width: 480px;
   margin: 0 auto;
 }
-#section1 {
+.bg-img-01 {
   background-image: url('../assets/images/bg-01.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.bg-img-02 {
+  background-image: url('../assets/images/bg-02.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-black {
+  background-color: #2D2F31;
+}
+.bg-green {
+  background-color: #007d48;
 }
 .section-content {
   display: flex;
@@ -131,13 +198,26 @@ export default {
 .section-title {
   font-size: 1.75rem;
   font-weight: 700;
+  margin: 1rem 0;
 }
 .paragraph-text {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
-.text-box .btn-input {
+.title-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+}
+.text-white {
+  color: #ffffff;
+}
+.text-emphasis {
+  font-weight: 700;
+}
+.btn-input {
   margin: 1.5rem 0;
 }
 .image-box {
@@ -160,30 +240,22 @@ export default {
 .image-box-icon .fa-beat {
   animation-duration: 2.5s;
 }
-#section2 {
-  background-color: #2D2F31;
-}
-#section2 .section-title{
-  color: #ffffff;
-  margin: 1rem 0;
-}
 .simple-tip-card-box {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 1rem;
 }
-#section3 {
-  background-color: #007d48;
-}
-#section3 .section-title {
-  color: #000000;
-  margin: 1rem 0;
-}
 .quote-card-box {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 1rem;
+}
+.bullet-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 </style>

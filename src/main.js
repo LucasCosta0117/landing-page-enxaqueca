@@ -8,8 +8,18 @@ import { faMedrt } from '@fortawesome/free-brands-svg-icons';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCircle, faMedrt, faEye, faNotesMedical, faQuoteLeft);
+library.add(
+    faCircle, 
+    faMedrt, 
+    faEye, 
+    faNotesMedical, 
+    faQuoteLeft, 
+    faCircleCheck, 
+    faClipboardList
+);
 
 createApp(App)
     .component('FontAwesomeIcon', FontAwesomeIcon)
