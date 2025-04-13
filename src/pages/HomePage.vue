@@ -98,22 +98,17 @@
       </section>
       <section class="section-content bg-black">
         <div class="title-icon">
-          <font-awesome-icon :icon="['fas', 'clipboard-list']" size="3x" style="color: #cb6301;" />
+          <font-awesome-icon :icon="['fas', 'clipboard-list']" size="3x" style="color: #FA7F59;" />
           <h2 class="section-title text-white">O QUE VOCÊ ENCONTRARÁ NO EBOOK</h2>
         </div>
-        <p class="paragraph-text text-white">
-          1- VOCÊ NÃO ESTÁ SÓ (QUANTAS PESSOAS SOFREM COM ENXAQUECA NO BRASIL?
-          2- COMO EU SEI QUE SOFRO DE ENXAQUECA? (DEFINIÇÃO E DIAGNÓSTICO)
-          3- QUAL TIPO DE ENXAQUECA ME ATINGE? (CLASSIFICAÇÃO DA ENXAQUECA)
-          4- COMO ME CURAR? (HÁ CURA PARA A ENXAQUECA?)
-          5- COMO TRATAR? (CONTROLE DA ENXAQUECA)
-          6- QUAIS HÁBITOS DE VIDA PODEM ME AJUDAR? (TRATAMENTOS SEM USO DE MEDICAMENTOS)
-          7- PRECISO MESMO DE ALGUM REMÉDIO? (TRATAMENTOS COM USO DE MEDICAMENTOS)
-          8- ACOMPANHAMENTO PSICOLÓGICO
-          9- CONHECIMENTOS BÁSICOS PARA A AUTOAVALIAÇÃO E ACOMPANHAMENTO
-          10- COMO IDENTIFICAR UM BOM MÉDICO?
-          11- BÔNUS
-        </p>
+        <summary-mock/>
+        <!-- <img src="" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas"> -->
+        <div class="btn-input">
+          <sall-button 
+            :btnTextValue="label.btnSec3"
+            :btnBgColor="colorBtn.btnSec1"
+          />
+        </div>
       </section>
     </div>
     <div class="footer-content">
@@ -127,6 +122,7 @@ import SallButton from '@/components/SallButton.vue'
 import SimpleTipCard from '@/components/SimpleTipCard.vue';
 import QuoteCard from '@/components/QuoteCard.vue';
 import BulletItem from '@/components/BulletItem.vue';
+import SummaryMock from '@/components/SummaryMock.vue';
 
 /**
  * Responsável por organizar todo o conteúdo da landing page
@@ -137,7 +133,8 @@ export default {
       SallButton,
       SimpleTipCard,
       QuoteCard,
-      BulletItem
+      BulletItem,
+      SummaryMock
     },
     data() {
         return {
@@ -146,14 +143,15 @@ export default {
            */
           label: {
             btnSec1:'ADQUIRIR O E-BOOK AGORA',
-            btnSec2:'QUERO DAR O PRIMEIRO PASSO'
+            btnSec2:'QUERO DAR O PRIMEIRO PASSO',
+            btnSec3:'BAIXAR O E-BOOK'
           },
           /**
            * Cor para os botões de download durante as seções
            */
           colorBtn: {
             btnSec1: '#007d48',
-            btnSec2: '#0917c1'
+            btnSec2: '#0917c1',
           }
         }
     }

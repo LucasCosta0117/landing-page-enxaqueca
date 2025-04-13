@@ -12,12 +12,12 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
-    faCircle, 
-    faMedrt, 
-    faEye, 
-    faNotesMedical, 
-    faQuoteLeft, 
-    faCircleCheck, 
+    faCircle,
+    faMedrt,
+    faEye,
+    faNotesMedical,
+    faQuoteLeft,
+    faCircleCheck,
     faClipboardList
 );
 
