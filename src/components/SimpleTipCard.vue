@@ -60,7 +60,8 @@ export default {
          * Retorna o máximo de caracteres que pode ser exibido, garantindo o layout do componente.
          */
         getTruncatedText() {
-            return (this.textCard.length <= 100) ? this.textCard : (this.textCard.substring(0, 100) + '...');
+            const limChar = 100;
+            return (this.textCard.length <= limChar) ? this.textCard : (this.textCard.substring(0, limChar) + '...');
         }
     }
 }
