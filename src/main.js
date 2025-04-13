@@ -10,6 +10,10 @@ import { faNotesMedical } from '@fortawesome/free-solid-svg-icons';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 library.add(
     faCircle,
@@ -18,7 +22,10 @@ library.add(
     faNotesMedical,
     faQuoteLeft,
     faCircleCheck,
-    faClipboardList
+    faClipboardList,
+    faStar,
+    faStarRegular,
+    faUser
 );
 
 createApp(App)

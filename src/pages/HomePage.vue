@@ -61,12 +61,10 @@
         <h2 class="section-title">A Verdade Que Ninguém Conta:</h2>
         <p class="paragraph-text">
           A enxaqueca não é só uma questão de "tomar remédio".
-          Ela envolve entender como alimentação, sono, estresse e emoções influenciam sua saúde
+          Ela envolve entender como <span class="text-emphasis">alimentação, sono, estresse e emoções</span> influenciam sua saúde
         </p>
         <p class="paragraph-text">
           <span class="text-emphasis">O problema?</span>
-        </p>
-        <p class="paragraph-text">
           Muitas vezes, você sai da consulta com uma prescrição genérica e sem orientação clara.
         </p>
         <p class="paragraph-text">
@@ -102,7 +100,37 @@
           <h2 class="section-title text-white">O QUE VOCÊ ENCONTRARÁ NO EBOOK</h2>
         </div>
         <summary-mock/>
-        <!-- <img src="" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas"> -->
+        <img class="mock-img" src="" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
+        <div class="feedback-section">
+          <feedback-card
+            :rating="3"
+            :user-name="'Lucas Costa'"
+            :feedback="
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+            "
+          />
+          <feedback-card
+            :rating="4"
+            :user-name="'Zaion Called'"
+            :feedback="
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+            "
+          />
+          <feedback-card
+            :rating="5"
+            :user-name="'Maria Silva'"
+            :feedback="
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+            "
+          />
+          <feedback-card
+            :rating="3"
+            :user-name="'João Santos'"
+            :feedback="
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+            "
+          />
+        </div>
         <div class="btn-input">
           <sall-button 
             :btnTextValue="label.btnSec3"
@@ -123,6 +151,7 @@ import SimpleTipCard from '@/components/SimpleTipCard.vue';
 import QuoteCard from '@/components/QuoteCard.vue';
 import BulletItem from '@/components/BulletItem.vue';
 import SummaryMock from '@/components/SummaryMock.vue';
+import FeedbackCard from '@/components/FeedbackCard.vue';
 
 /**
  * Responsável por organizar todo o conteúdo da landing page
@@ -134,7 +163,8 @@ export default {
       SimpleTipCard,
       QuoteCard,
       BulletItem,
-      SummaryMock
+      SummaryMock,
+      FeedbackCard
     },
     data() {
         return {
@@ -187,6 +217,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 0 1.25rem;
+  gap: 1rem;
 }
 .main-title {
   font-size: 2.25rem;
@@ -196,12 +227,16 @@ export default {
 .section-title {
   font-size: 1.75rem;
   font-weight: 700;
-  margin: 1rem 0;
+  margin-top: 1rem;
+}
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .paragraph-text {
   font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
 .title-icon {
   display: flex;
@@ -241,7 +276,7 @@ export default {
 .simple-tip-card-box {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 .quote-card-box {
@@ -254,6 +289,13 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+}
+.mock-img {
+  display: none;
+}
+.feedback-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 </style>
