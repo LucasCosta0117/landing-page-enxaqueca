@@ -13,6 +13,7 @@ import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faArrowsDownToPeople } from '@fortawesome/free-solid-svg-icons';
 
 
 library.add(
@@ -25,7 +26,8 @@ library.add(
     faClipboardList,
     faStar,
     faStarRegular,
-    faUser
+    faUser,
+    faArrowsDownToPeople
 );
 
 createApp(App)

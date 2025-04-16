@@ -33,8 +33,8 @@
             textCard="Como reconhecer os gatilhos das crises"
           />
           <simple-tip-card
-          textCard="Estratégias práticas para reduzir os episódios de dor"
-          iconName="fa-solid fa-notes-medical"
+            textCard="Estratégias práticas para reduzir os episódios de dor"
+            iconName="fa-solid fa-notes-medical"
           />
           <simple-tip-card
             textCard="Quando buscar ajuda médica e identificar profissionais realmente competentes"
@@ -101,6 +101,42 @@
         </div>
         <summary-mock/>
         <img class="mock-img" src="" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
+        <div class="title-icon">
+          <h2 class="section-title text-white">PARA QUEM SERVE ESSE EBOOK?</h2>
+          <font-awesome-icon :icon="['fas', 'arrows-down-to-people']" size="3x" color="#007d48"/>
+        </div>
+        <div class="bullet-box">
+          <bullet-item
+            text="Para quem quer reconquistar um estilo de vida saudável"
+          />
+          <bullet-item
+            text="Para quem não sabe o que deve fazer para parar com as crises"
+          />
+          <bullet-item
+            text="Para quem sente desesperança sobre voltar a ter uma vida sem dores"
+          />
+          <bullet-item
+            text="Para quem viveu quadros de enxaqueca recente"
+          />
+          <bullet-item
+            text="Para quem nunca foi ao médico saber sobre sua enxaqueca"
+          />
+          <bullet-item
+            text="Para quem já foi ao médico mas não se sentiu acolhida(o)"
+          />
+          <bullet-item
+            text="Para quem comete muitos erros na dieta"
+          />
+          <bullet-item
+            text="Para quem tem a vida interrompida sempre que a crise de enxaqueca chega"
+          />
+          <bullet-item
+            text="Para quem quer despertar todo o potencial e viver uma nova vida extraordinária (com ou sem enxaqueca)"
+          />
+          <bullet-item
+            text="Para quem está tendo uma crise agora mesmo"
+          />
+        </div>
         <div class="feedback-section">
           <feedback-card
             :rating="3"
@@ -138,6 +174,18 @@
           />
         </div>
       </section>
+      <section class="section-content bg-green">
+        <div class="title-icon">
+          <h2 class="section-title text-white">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
+        </div>
+        <benefits-card />
+        <div class="btn-input">
+          <sall-button 
+            :btnTextValue="label.btnSec3"
+            :btnBgColor="colorBtn.btnSec3"
+          />
+        </div>
+      </section>
     </div>
     <div class="footer-content">
       Rodapé
@@ -152,7 +200,7 @@ import QuoteCard from '@/components/QuoteCard.vue';
 import BulletItem from '@/components/BulletItem.vue';
 import SummaryMock from '@/components/SummaryMock.vue';
 import FeedbackCard from '@/components/FeedbackCard.vue';
-
+import BenefitsCard from '@/components/BenefitsCards.vue';
 /**
  * Responsável por organizar todo o conteúdo da landing page
  */
@@ -164,7 +212,8 @@ export default {
       QuoteCard,
       BulletItem,
       SummaryMock,
-      FeedbackCard
+      FeedbackCard,
+      BenefitsCard
     },
     data() {
         return {
@@ -182,6 +231,7 @@ export default {
           colorBtn: {
             btnSec1: '#007d48',
             btnSec2: '#0917c1',
+            btnSec3: '#de0000'
           }
         }
     }
