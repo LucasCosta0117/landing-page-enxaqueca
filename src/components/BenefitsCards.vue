@@ -46,7 +46,7 @@ export default {
   color: white;
   border-radius: 0.5rem;
   width: 100%;
-  box-shadow: rgba(255, 255, 255, 0.9) -6px 6px;
+  box-shadow: rgba(255, 255, 255) -0.45rem 0.45rem;
 }
 .benefits-title {
   display: flex;

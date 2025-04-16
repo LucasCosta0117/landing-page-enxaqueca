@@ -176,7 +176,15 @@
       </section>
       <section class="section-content bg-green">
         <div class="title-icon">
-          <h2 class="section-title text-white">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
+          <h2 class="section-title text-white">ABA DE AUTORIDADE</h2>
+        </div>
+        <div>
+          PREENCHER COM DADOS ESTATÍSTICOS DOS BENEFÍCIOS GERADOS PELAS FONTES USADAS NA PRODUÇÃO DO MATERIAL
+        </div>
+      </section>
+      <section class="section-content bg-img-02">
+        <div class="title-icon">
+          <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
         </div>
         <benefits-card />
         <div class="btn-input">
