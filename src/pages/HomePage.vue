@@ -187,15 +187,19 @@
           <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
         </div>
         <benefits-card />
+        <div class="price-box">
+          <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK <span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+          <img src="../assets/images/price-descount.png" alt="Etiqueta de preço com desconto">
+        </div>
         <div class="btn-input">
           <sall-button 
-            :btnTextValue="label.btnSec3"
+            :btnTextValue="label.btnSec4"
             :btnBgColor="colorBtn.btnSec3"
           />
         </div>
       </section>
     </div>
-    <div class="footer-content">
+    <div class="footer-content bg-black">
       Rodapé
     </div>
   </div>
@@ -231,7 +235,8 @@ export default {
           label: {
             btnSec1:'ADQUIRIR O E-BOOK AGORA',
             btnSec2:'QUERO DAR O PRIMEIRO PASSO',
-            btnSec3:'BAIXAR O E-BOOK'
+            btnSec3:'DESEJO SABER LIDAR COM A ENXAQUECA',
+            btnSec4:'BAIXAR O E-BOOK'
           },
           /**
            * Cor para os botões de download durante as seções
@@ -355,5 +360,13 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.price-box img {
+  width: 100%;
 }
 </style>
