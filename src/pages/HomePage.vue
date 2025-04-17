@@ -200,7 +200,7 @@
       </section>
     </div>
     <div class="footer-content bg-black">
-      Rodapé
+      <p class="text-white">Copyright © 2025 Todos os direitos reservados | Desenvolvido por <a :href="github" class="text-white" target="_blank">Lucas Costa</a></p>
     </div>
   </div>
 </template>
@@ -245,7 +245,8 @@ export default {
             btnSec1: '#007d48',
             btnSec2: '#0917c1',
             btnSec3: '#de0000'
-          }
+          },
+          github: 'https://github.com/LucasCosta0117'
         }
     }
 
@@ -368,5 +369,12 @@ export default {
 }
 .price-box img {
   width: 100%;
+}
+.footer-content {
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(180deg,rgb(88, 88, 88) 0%, rgba(0, 0, 0, 1) 50%);
+  padding: 1rem;
+  text-align: center;
 }
 </style>
