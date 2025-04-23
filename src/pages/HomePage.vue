@@ -29,27 +29,20 @@
         <h2 class="section-title text-white">O Que Você Vai Aprender:</h2>
         <div class="simple-tip-card-box">
           <simple-tip-card
-            iconName="fa-solid fa-eye"
-            textCard="Como reconhecer os gatilhos das crises"
-          />
-          <simple-tip-card
-            textCard="Estratégias práticas para reduzir os episódios de dor"
-            iconName="fa-solid fa-notes-medical"
-          />
-          <simple-tip-card
-            textCard="Quando buscar ajuda médica e identificar profissionais realmente competentes"
-            iconName="fa-brands fa-medrt"
+            v-for="(card, index) in tipCards"
+            :key="index"
+            :iconName="card.iconName"
+            :textCard="card.textCard"
           />
         </div>
       </section>
       <section class="section-content bg-green">
         <h2 class="section-title">Pare de Cair Nas Ciladas dos "Gurus de Internet"</h2>
         <div class="quote-card-box">
-          <quote-card 
-            textCard="Toma um chá disso que resolve!"
-          />
           <quote-card
-            textCard="Ah, larga o celular que vai melhorar!"
+            v-for="(card, index) in quoteCards"
+            :key="index"
+            :textCard="card.textCard"
           />
           <p class="paragraph-text text-white">
             Você não precisa de mais palpites sem fundamento.
@@ -75,13 +68,9 @@
         </p>
         <div class="bullet-box">
           <bullet-item
-            text="Reconhecer os sinais do seu corpo."
-          />
-          <bullet-item
-            text="Fazer escolhas que melhoram seu bem-estar."
-          />
-          <bullet-item
-            text="Saber como escolher um médico que realmente te escute."
+            v-for="(item, index) in bulletItems1"
+            :key="index"
+            :text="item.text"
           />
         </div>
         <p class="paragraph-text">
@@ -107,64 +96,18 @@
         </div>
         <div class="bullet-box">
           <bullet-item
-            text="Para quem quer reconquistar um estilo de vida saudável"
-          />
-          <bullet-item
-            text="Para quem não sabe o que deve fazer para parar com as crises"
-          />
-          <bullet-item
-            text="Para quem sente desesperança sobre voltar a ter uma vida sem dores"
-          />
-          <bullet-item
-            text="Para quem viveu quadros de enxaqueca recente"
-          />
-          <bullet-item
-            text="Para quem nunca foi ao médico saber sobre sua enxaqueca"
-          />
-          <bullet-item
-            text="Para quem já foi ao médico mas não se sentiu acolhida(o)"
-          />
-          <bullet-item
-            text="Para quem comete muitos erros na dieta"
-          />
-          <bullet-item
-            text="Para quem tem a vida interrompida sempre que a crise de enxaqueca chega"
-          />
-          <bullet-item
-            text="Para quem quer despertar todo o potencial e viver uma nova vida extraordinária (com ou sem enxaqueca)"
-          />
-          <bullet-item
-            text="Para quem está tendo uma crise agora mesmo"
+            v-for="(item, index) in bulletItems2"
+            :key="index"
+            :text="item.text"
           />
         </div>
         <div class="feedback-section">
           <feedback-card
-            :rating="3"
-            :user-name="'Lucas Costa'"
-            :feedback="
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-            "
-          />
-          <feedback-card
-            :rating="4"
-            :user-name="'Zaion Called'"
-            :feedback="
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-            "
-          />
-          <feedback-card
-            :rating="5"
-            :user-name="'Maria Silva'"
-            :feedback="
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-            "
-          />
-          <feedback-card
-            :rating="3"
-            :user-name="'João Santos'"
-            :feedback="
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
-            "
+            v-for="(card, index) in feedbackCards"
+            :key="index"
+            :rating="card.rating"
+            :user-name="card.userName"
+            :feedback="card.feedback"
           />
         </div>
         <div class="btn-input">
@@ -246,6 +189,63 @@ export default {
             btnSec2: '#0917c1',
             btnSec3: '#de0000'
           },
+          tipCards: [
+            {
+              iconName: 'fa-solid fa-eye',
+              textCard: 'Como reconhecer os gatilhos das crises'
+            },
+            {
+              iconName: 'fa-solid fa-notes-medical',
+              textCard: 'Estratégias práticas para reduzir os episódios de dor'
+            },
+            {
+              iconName: 'fa-brands fa-medrt',
+              textCard: 'Quando buscar ajuda médica e identificar profissionais realmente competentes'
+            }
+          ],
+          quoteCards: [
+            { textCard: 'Toma um chá disso que resolve!' },
+            { textCard: 'Ah, larga o celular que vai melhorar!' }
+          ],
+          bulletItems1: [
+            { text: 'Reconhecer os sinais do seu corpo.' },
+            { text: 'Fazer escolhas que melhoram seu bem-estar.' },
+            { text: 'Saber como escolher um médico que realmente te escute.' }
+          ],
+          bulletItems2: [
+            { text: 'Para quem quer reconquistar um estilo de vida saudável' },
+            { text: 'Para quem não sabe o que deve fazer para parar com as crises' },
+            { text: 'Para quem sente desesperança sobre voltar a ter uma vida sem dores' },
+            { text: 'Para quem viveu quadros de enxaqueca recente' },
+            { text: 'Para quem nunca foi ao médico saber sobre sua enxaqueca' },
+            { text: 'Para quem já foi ao médico mas não se sentiu acolhida(o)' },
+            { text: 'Para quem comete muitos erros na dieta' },
+            { text: 'Para quem tem a vida interrompida sempre que a crise de enxaqueca chega' },
+            { text: 'Para quem quer despertar todo o potencial e viver uma nova vida extraordinária (com ou sem enxaqueca)' },
+            { text: 'Para quem está tendo uma crise agora mesmo' }
+          ],
+          feedbackCards: [
+            {
+              rating: 3,
+              userName: 'Lucas Costa',
+              feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            },
+            {
+              rating: 4,
+              userName: 'Zaion Called',
+              feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            },
+            {
+              rating: 3,
+              userName: 'Maria Silva',
+              feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            },
+            {
+              rating: 5,
+              userName: 'João Santos',
+              feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            },
+          ],
           github: 'https://github.com/LucasCosta0117'
         }
     }
