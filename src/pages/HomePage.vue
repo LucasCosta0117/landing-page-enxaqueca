@@ -200,7 +200,11 @@ export default {
             },
             {
               iconName: 'fa-brands fa-medrt',
-              textCard: 'Quando buscar ajuda médica e identificar profissionais realmente competentes'
+              textCard: 'Quando buscar ajuda médica'
+            },
+            {
+              iconName: 'fa-solid fa-stethoscope',
+              textCard: 'Como identificar profissionais realmente competentes'
             }
           ],
           quoteCards: [
@@ -376,5 +380,70 @@ export default {
   background: linear-gradient(180deg,rgb(88, 88, 88) 0%, rgba(0, 0, 0, 1) 50%);
   padding: 1rem;
   text-align: center;
+}
+
+/** Responsividade para telas até 768px (Tabletes) */
+@media(min-width: 481px) and (max-width: 768px) {
+  .home-view-container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .main-title {
+    font-size: 2.75rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .paragraph-text {
+    font-size: 1.5rem;
+  }
+  .image-box img {
+    width: 80%;
+  }
+  .image-box-icon {
+    font-size: 2.25rem;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+  }
+  .image-box-icon span:first-of-type{
+    padding-right: 4rem;
+  }
+  .price-box {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem;
+  }
+  .price-box img {
+    width: 40%;
+  }
+}
+
+/** Responsividade para telas até 1366px (Notebooks/telas HD) */
+@media(min-width: 769px) and (max-width: 1366px) {
+  .home-view-container {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+}
+
+/** Responsividade para telas até 1920px (Notebooks/telas FHD) */
+@media(min-width: 1367px) and (max-width: 1920px) {
+  .home-view-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+/** Responsividade para telas maiores que 1920px (Notebooks/telas FHD+) */
+@media(min-width: 1921px) {
+  .home-view-container {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 </style>

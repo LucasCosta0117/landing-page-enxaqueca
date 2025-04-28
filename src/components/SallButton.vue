@@ -62,4 +62,11 @@ export default {
     box-shadow: none;
     cursor: pointer;
 }
+
+/** Responsividade para telas até 768px (Tabletes) */
+@media(min-width: 481px) and (max-width: 768px) {
+  .btn-input {
+    font-size: 1.25rem;
+  }
+}
 </style>

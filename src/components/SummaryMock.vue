@@ -5,7 +5,7 @@
                 v-for="(item, key) in summaryItens" 
                 :key="key"
             >
-                {{ key + 1 }}. {{ item }}
+                <b>{{ key + 1 }}.</b> {{ item }}
             </li>
         </ul>
     </div>
@@ -47,5 +47,12 @@ export default {
 .summary-list:only-child {
     font-size: 1.125rem;
     font-weight: 500;
+}
+
+/** Responsividade para telas até 768px (Tabletes) */
+@media(min-width: 481px) and (max-width: 768px) {
+  .summary-list:only-child {
+    font-size: 1.25rem;
+  }
 }
 </style>

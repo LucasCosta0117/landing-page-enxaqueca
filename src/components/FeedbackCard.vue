@@ -103,4 +103,14 @@ export default {
 .start-color {
   color: rgb(230, 197, 15);
 }
+
+/** Responsividade para telas até 768px (Tabletes) */
+@media(min-width: 481px) and (max-width: 768px) {
+  .feedback-rating .name-user {
+    font-size: 1.25rem;
+  }
+  .feedback-text {
+    font-size: 1.25rem;
+  }
+}
 </style>

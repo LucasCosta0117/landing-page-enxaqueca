@@ -41,4 +41,11 @@ export default {
   font-size: 1.25rem;
   font-weight: 500;
 }
+
+/** Responsividade para telas até 768px (Tabletes) */
+@media(min-width: 481px) and (max-width: 768px) {
+  .text-item {
+    font-size: 1.5rem;
+  }
+}
 </style>

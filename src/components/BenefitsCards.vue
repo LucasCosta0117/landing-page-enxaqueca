@@ -79,4 +79,11 @@ export default {
   font-size: 1.25rem;
   margin-right: 0.5rem;
 }
+
+/** Responsividade para telas até 768px (Tabletes) */
+@media(min-width: 481px) and (max-width: 768px) {
+  .benefits-itens li {
+    font-size: 1.375rem;
+  }
+}
 </style>

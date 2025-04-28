@@ -54,6 +54,7 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     background-color: #ffffff;
     border-radius: 0.5rem;
     padding: 1rem;
@@ -69,10 +70,17 @@ export default {
     width: 20%;
 }
 .quote-card-text {
-    font-size: 1.675rem;
+    font-size: 1.25rem;
     font-weight: 400;
-    margin: 1rem;
-    text-align: center;
+    padding-right: 1rem;
+    text-align: right;
     border-right: lightgray solid 2px;
+}
+
+/** Responsividade para telas até 768px (Tabletes) */
+@media(min-width: 481px) and (max-width: 768px) {
+  .quote-card-text {
+    font-size: 1.5rem;
+  }
 }
 </style>

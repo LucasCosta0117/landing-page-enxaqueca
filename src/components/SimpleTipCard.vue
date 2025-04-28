@@ -89,4 +89,11 @@ export default {
     margin-top: 1rem;
     text-align: center;
 }
+
+/** Responsividade para telas até 768px (Tabletes) */
+@media(min-width: 481px) and (max-width: 768px) {
+  .tip-card-text {
+    font-size: 1.5rem;
+  }
+}
 </style>
