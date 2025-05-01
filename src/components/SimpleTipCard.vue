@@ -96,4 +96,33 @@ export default {
     font-size: 1.5rem;
   }
 }
+
+/** Responsividade para telas até 1366px (Notebooks/telas HD) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tip-card-container {
+        height: 18rem;
+        width: 48%;
+    }
+    .tip-card-container:hover {
+        scale: 1.05;
+        transition: scale 0.3s linear;
+    }
+}
+
+/** Responsividade para telas até 1366px (Notebooks/telas HD) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .tip-card-container {
+        height: 18rem;
+        width: 48%;
+    }
+    .tip-card-container:hover {
+        scale: 1.05;
+        transition: scale 0.5s linear;
+    }
+}
+
+/** Responsividade para telas até 1366px (Notebooks/telas HD) */
+@media (min-width: 1367px) and (max-width: 1920px) {
+
+}
 </style>

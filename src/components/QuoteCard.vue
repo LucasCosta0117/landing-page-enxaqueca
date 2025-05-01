@@ -59,7 +59,7 @@ export default {
     border-radius: 0.5rem;
     padding: 1rem;
     width: 100%;
-    height: 12rem;
+    height: 8rem;
 }
 .quote-card-icon {
     display: flex;
@@ -82,5 +82,35 @@ export default {
   .quote-card-text {
     font-size: 1.5rem;
   }
+}
+
+/** Responsividade para telas até 1366px (Notebooks/telas HD) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quote-card-container {
+        height: 5rem;
+        width: 49%;
+    }
+    .quote-card-container:hover {
+        scale: 0.98;
+        transition: scale 0.2s linear;
+    }
+    .quote-card-text {
+        font-size: 1.5rem;
+    }
+}
+
+/** Responsividade para telas até 1366px (Notebooks/telas HD) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .quote-card-container {
+        height: 5rem;
+        width: 49%;
+    }
+    .quote-card-container:hover {
+        scale: 0.98;
+        transition: scale 0.2s linear;
+    }
+    .quote-card-text {
+        font-size: 1.75rem;
+    }
 }
 </style>

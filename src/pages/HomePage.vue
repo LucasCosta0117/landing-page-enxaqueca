@@ -7,22 +7,22 @@
           <p class="paragraph-text">Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
           <p class="paragraph-text">Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
           <div class="btn-input">
-            <sall-button 
+            <sall-button
               :btnTextValue="label.btnSec1"
               :btnBgColor="colorBtn.btnSec1"
             />
           </div>
         </div>
         <div class="image-box">
+          <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
           <div class="image-box-icon">
             <span>
-              <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat style="color: #de000030"/>
+              <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat/>
             </span>
             <span>
-              <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat style="color: #de000030"/>
+              <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat/>
             </span>
           </div>
-          <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
         </div>
       </section>
       <section class="section-content bg-black">
@@ -48,6 +48,7 @@
             Você não precisa de mais palpites sem fundamento.
             Precisa de conhecimento claro, direto e confiável para cuidar melhor de si.
           </p>
+          <img src="../assets/images/hand-drawn-life-coaching-illustration.png" alt="pessoa aconselhando outra">
         </div>
       </section>
       <section class="section-content bg-img-02">
@@ -66,12 +67,17 @@
         <p class="paragraph-text">
           Pegue agora as informações essenciais para:
         </p>
-        <div class="bullet-box">
-          <bullet-item
-            v-for="(item, index) in bulletItems1"
-            :key="index"
-            :text="item.text"
-          />
+        <div class="bullet-container">
+          <div class="bullet-box">
+            <bullet-item
+              v-for="(item, index) in bulletItems1"
+              :key="index"
+              :text="item.text"
+            />
+          </div>
+          <div class="bullet-img">
+            <img src="../assets/images/woman-doctor-pointer.png" alt="Medica apontando para esquerda">
+          </div>
         </div>
         <p class="paragraph-text">
           Dê o primeiro passo para viver sem se sentir refém da dor.
@@ -84,13 +90,15 @@
         </div>
       </section>
       <section class="section-content bg-black">
-        <div class="title-icon">
+        <div class="title-with-icon">
           <font-awesome-icon :icon="['fas', 'clipboard-list']" size="3x" style="color: #FA7F59;" />
           <h2 class="section-title text-white">O QUE VOCÊ ENCONTRARÁ NO EBOOK</h2>
         </div>
-        <summary-mock/>
+        <div class="summary-box">
+          <summary-mock/>
+        </div>
         <img class="mock-img" src="" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
-        <div class="title-icon">
+        <div class="title-with-icon">
           <h2 class="section-title text-white">PARA QUEM SERVE ESSE EBOOK?</h2>
           <font-awesome-icon :icon="['fas', 'arrows-down-to-people']" size="3x" color="#007d48"/>
         </div>
@@ -118,17 +126,13 @@
         </div>
       </section>
       <section class="section-content bg-green">
-        <div class="title-icon">
-          <h2 class="section-title text-white">ABA DE AUTORIDADE</h2>
-        </div>
+        <h2 class="section-title text-white">ABA DE AUTORIDADE</h2>
         <div>
           PREENCHER COM DADOS ESTATÍSTICOS DOS BENEFÍCIOS GERADOS PELAS FONTES USADAS NA PRODUÇÃO DO MATERIAL
         </div>
       </section>
       <section class="section-content bg-img-02">
-        <div class="title-icon">
-          <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
-        </div>
+        <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
         <benefits-card />
         <div class="price-box">
           <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK <span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
@@ -178,7 +182,7 @@ export default {
           label: {
             btnSec1:'ADQUIRIR O E-BOOK AGORA',
             btnSec2:'QUERO DAR O PRIMEIRO PASSO',
-            btnSec3:'DESEJO SABER LIDAR COM A ENXAQUECA',
+            btnSec3:'SABER LIDAR COM A ENXAQUECA',
             btnSec4:'BAIXAR O E-BOOK'
           },
           /**
@@ -208,8 +212,8 @@ export default {
             }
           ],
           quoteCards: [
-            { textCard: 'Toma um chá disso que resolve!' },
-            { textCard: 'Ah, larga o celular que vai melhorar!' }
+            { textCard: 'Toma um chá "disso", resolve!' },
+            { textCard: 'Só largar o celular que vai melhorar!' }
           ],
           bulletItems1: [
             { text: 'Reconhecer os sinais do seu corpo.' },
@@ -230,24 +234,24 @@ export default {
           ],
           feedbackCards: [
             {
-              rating: 3,
-              userName: 'Lucas Costa',
-              feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-            },
-            {
-              rating: 4,
-              userName: 'Zaion Called',
-              feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-            },
-            {
-              rating: 3,
-              userName: 'Maria Silva',
-              feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+              rating: 5,
+              userName: 'Mel Barbosa',
+              feedback: 'Amei o e-book, recomendo! Já estou esperando pelos próximos temas!'
             },
             {
               rating: 5,
-              userName: 'João Santos',
-              feedback: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+              userName: 'Lunisa Linay',
+              feedback: 'O E-book me trouxe muitas informações que eu ainda não sabia. Gostei muito!'
+            },
+            {
+              rating: 4,
+              userName: 'Iane Bárbara',
+              feedback: 'Gostei de tudo, o conteúdo foi apresentado de forma clara e organizada, além de ter um visual e design de qualidade.'
+            },
+            {
+              rating: 5,
+              userName: 'Jéssica Muniz',
+              feedback: 'Gostei bastante da parte dos conhecimentos para autoavaliação. Isso tem melhorado minha relação com a enxaqueca.'
             },
           ],
           github: 'https://github.com/LucasCosta0117'
@@ -306,11 +310,12 @@ export default {
   font-size: 1.25rem;
   font-weight: 500;
 }
-.title-icon {
+.title-with-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1.25rem;
+  margin-top: 1rem;
 }
 .text-white {
   color: #ffffff;
@@ -331,6 +336,7 @@ export default {
   width: 80%;
 }
 .image-box-icon {
+  color: #de000030;
   position: absolute;
   top: 12%;
   left: 38%;
@@ -350,13 +356,26 @@ export default {
 .quote-card-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 1rem;
+}
+.quote-card-box img {
+  width: 70%;
+}
+.bullet-container {
+  display: flex;
+  flex-direction: row;
+}
+.bullet-container .bullet-img {
+  display: none;
 }
 .bullet-box {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
 }
 .mock-img {
   display: none;
@@ -386,7 +405,7 @@ export default {
 @media(min-width: 481px) and (max-width: 768px) {
   .home-view-container {
     width: 100%;
-    max-width: 1024px;
+    max-width: 768px;
     margin: 0 auto;
   }
   .main-title {
@@ -422,11 +441,148 @@ export default {
 }
 
 /** Responsividade para telas até 1366px (Notebooks/telas HD) */
-@media(min-width: 769px) and (max-width: 1366px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-view-container {
+    width: 100%;
+    max-width: 1024px;
+  }
+  .section-content {
+    padding: 0 3rem;
+    gap: 2rem;
+  }
+  .main-title {
+    font-size: 3.25rem;
+    margin: 3rem 0;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  .paragraph-text {
+    font-size: 1.5rem;
+  }
+  .image-box img {
+    position: relative;
+    left: 10%;
+    width: 25%;
+  }
+  .image-box-icon {
+    position: absolute;
+    top: 12%;
+    left: 55%;
+  }
+  .image-box-icon span:first-of-type{
+    padding-right: 1.75rem;
+  }
+  .text-box {
+    width: 75%;
+  }
+  .simple-tip-card-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+  .quote-card-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 1rem;
+  }
+  .quote-card-box img {
+    width: 50%;
+  }
+  .bullet-container {
+    align-items: center;
+  }
+  .bullet-container .bullet-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 70%;
+  } 
+  .bullet-container .bullet-img {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+  }
+  .bullet-container .bullet-img img {
+    width: 20rem;
+  }
+}
+
+/** Responsividade para telas até 1366px (Notebooks/telas HD+) */
+@media (min-width: 1025px) and (max-width: 1367px) {
   .home-view-container {
     width: 100%;
     max-width: 1366px;
-    margin: 0 auto;
+  }
+  .section-content {
+    padding: 0 3rem;
+    gap: 2rem;
+  }
+  .main-title {
+    font-size: 3.5rem;
+    margin: 3rem 0;
+  }
+  .section-title {
+    font-size: 2.25rem;
+  }
+  .paragraph-text {
+    font-size: 1.75rem;
+  }
+  .image-box {
+    position: absolute;
+  }
+  .image-box img {
+    position: relative;
+    left: 46rem;
+    top: 13.1rem;
+    width: 20rem;
+  }
+  .image-box-icon {
+    position: relative;
+    font-size: 1.375rem;
+    left: 32rem;
+    top: 7rem;
+  }
+  .image-box-icon span:first-of-type{
+    padding-right: 1.75rem;
+  }
+  .text-box {
+    width: 60%;
+  }
+  .simple-tip-card-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+  .quote-card-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    gap: 1rem;
+  }
+  .quote-card-box img {
+    width: 50%;
+  }
+  .bullet-container {
+    align-items: center;
+  }
+  .bullet-container .bullet-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 70%;
+  } 
+  .bullet-container .bullet-img {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+  }
+  .bullet-container .bullet-img img {
+    width: 30rem;
   }
 }
 
