@@ -94,10 +94,14 @@
           <font-awesome-icon :icon="['fas', 'clipboard-list']" size="3x" style="color: #FA7F59;" />
           <h2 class="section-title text-white">O QUE VOCÊ ENCONTRARÁ NO EBOOK</h2>
         </div>
-        <div class="summary-box">
-          <summary-mock/>
+        <div class="summary-container">
+          <div class="summary-box">
+            <summary-mock/>
+          </div>
+          <div class="summary-img">
+            <img class="mock-img" src="../assets/images/mock-agrupado.png" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
+          </div>
         </div>
-        <img class="mock-img" src="" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
         <div class="title-with-icon">
           <h2 class="section-title text-white">PARA QUEM SERVE ESSE EBOOK?</h2>
           <font-awesome-icon :icon="['fas', 'arrows-down-to-people']" size="3x" color="#007d48"/>
@@ -110,6 +114,15 @@
           />
         </div>
         <div class="feedback-section">
+          <div class="feedback-section-title">
+            <div class="feedback-star-icon">
+              <font-awesome-icon
+                v-for="i in 5" :key="i"
+                :icon="['fas', 'star']"
+              />
+            </div>
+            <h2 class="text-white">Estas são as avaliações de quem já adquiriu este e-book e aprendeu a lidar com a enxaqueca</h2>
+          </div>
           <feedback-card
             v-for="(card, index) in feedbackCards"
             :key="index"
@@ -133,9 +146,17 @@
       </section>
       <section class="section-content bg-img-02">
         <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
-        <benefits-card />
+        <div class="benefits-container">
+          <div class="benefits-gif">
+            <img class="mock-gif" src="../assets/images/mockup-gif.gif" alt="">
+          </div>
+          <benefits-card />
+        </div>
         <div class="price-box">
-          <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK <span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+          <div>
+            <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK</p>
+            <p class="paragraph-text"><span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+          </div>
           <img src="../assets/images/price-descount.png" alt="Etiqueta de preço com desconto">
         </div>
         <div class="btn-input">
@@ -377,17 +398,38 @@ export default {
   gap: 0.5rem;
   width: 100%;
 }
-.mock-img {
+.summary-img {
   display: none;
 }
 .feedback-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
+}
+.feedback-section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 60%;
+  text-align: center;
+  gap: 1rem;
+}
+.feedback-star-icon {
+  font-size: 1.75rem;
+  color: rgb(230, 197, 15);
+}
+.benefits-gif {
+  display: none;
 }
 .price-box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
 }
 .price-box img {
@@ -432,11 +474,12 @@ export default {
   .price-box {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
     margin: 1.5rem;
   }
   .price-box img {
-    width: 40%;
+    width: 20rem;
   }
 }
 
@@ -507,6 +550,45 @@ export default {
     width: 30%;
   }
   .bullet-container .bullet-img img {
+    width: 20rem;
+  }
+  .summary-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  .summary-img {
+    display: block;
+  }
+  .mock-img {
+    width: 42rem;
+    height: auto;
+  }
+  .benefits-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .benefits-gif {
+    display: block;
+  }
+  .mock-gif {
+    width: 15rem;
+    height: auto;
+    border-radius: 1rem;
+    margin-left: 2rem;
+  }
+  .price-box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: 1.5rem;
+  }
+  .price-box img {
     width: 20rem;
   }
 }

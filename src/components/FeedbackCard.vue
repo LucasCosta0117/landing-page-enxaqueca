@@ -113,4 +113,30 @@ export default {
     font-size: 1.25rem;
   }
 }
+
+/** Responsividade para telas até 1024px (Tablets/Notebooks/telas HD) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .feedback-card-container {
+    width: 25rem;
+  }
+  .feedback-rating .name-user {
+    font-size: 1.25rem;
+  }
+  .feedback-text {
+    font-size: 1.25rem;
+  }
+}
+
+/** Responsividade para telas até 1366px (Notebooks/telas HD+) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .feedback-card-container {
+    width: 25rem;
+  }
+  .feedback-rating .name-user {
+    font-size: 1.25rem;
+  }
+  .feedback-text {
+    font-size: 1.25rem;
+  }
+}
 </style>

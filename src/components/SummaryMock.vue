@@ -56,20 +56,23 @@ export default {
   }
 }
 
-/** Responsividade para telas até 1366px (Notebooks/telas HD) */
+/** Responsividade para telas até 1024px (Tablets/Notebooks/telas HD) */
 @media (min-width: 769px) and (max-width: 1024px) {
+    .summary-mock-container {
+        width: 30rem;
+    }
   .summary-list:only-child {
     font-size: 1.25rem;
   }
 }
 
-/** Responsividade para telas até 1366px (Notebooks/telas HD) */
+/** Responsividade para telas até 1366px (Notebooks/telas HD+) */
 @media (min-width: 1025px) and (max-width: 1366px) {
     .summary-mock-container {
         width: 40rem;
     }
-  .summary-list:only-child {
+    .summary-list:only-child {
     font-size: 1.25rem;
-  }
+    }
 }
 </style>
