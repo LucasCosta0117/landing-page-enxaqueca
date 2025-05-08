@@ -85,7 +85,7 @@
         <div class="btn-input">
           <sall-button 
             :btnTextValue="label.btnSec2"
-            :btnBgColor="colorBtn.btnSec2"
+            :btnBgColor="colorBtn.btnSec1"
           />
         </div>
       </section>
@@ -102,10 +102,7 @@
             <img class="mock-img" src="../assets/images/mock-agrupado.png" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
           </div>
         </div>
-        <div class="title-with-icon">
-          <h2 class="section-title text-white">PARA QUEM SERVE ESSE EBOOK?</h2>
-          <font-awesome-icon :icon="['fas', 'arrows-down-to-people']" size="3x" color="#007d48"/>
-        </div>
+        <h2 class="section-title text-white">PARA QUEM SERVE ESSE EBOOK?</h2>
         <div class="bullet-box">
           <bullet-item
             v-for="(item, index) in bulletItems2"
@@ -134,7 +131,7 @@
         <div class="btn-input">
           <sall-button 
             :btnTextValue="label.btnSec3"
-            :btnBgColor="colorBtn.btnSec1"
+            :btnBgColor="colorBtn.btnSec2"
           />
         </div>
       </section>
@@ -301,10 +298,12 @@ export default {
   background-position: center;
 }
 .bg-black {
-  background-color: #2D2F31;
+  background: black;
+  background: radial-gradient(circle, rgba(16, 2, 122, 1) 0%, rgba(0, 0, 0, 1) 100%);   
 }
 .bg-green {
   background-color: #007d48;
+  background: radial-gradient(ellipse at bottom, rgba(130, 194, 81, 1) 0%, rgba(0, 125, 72, 1) 100%);
 }
 .section-content {
   display: flex;
