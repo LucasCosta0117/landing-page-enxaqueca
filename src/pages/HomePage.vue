@@ -295,7 +295,6 @@ export default {
 <style scoped>
 .home-view-container {
   width: 100%;
-  max-width: 480px;
   margin: 0 auto;
 }
 .bg-img-01 {
@@ -449,11 +448,16 @@ export default {
   width: 100%;
 }
 
-/** Responsividade para telas até 768px (Tabletes) */
-@media(min-width: 481px) and (max-width: 768px) {
+/* Responsividade - Aplicado o Material Design Breakpoints */
+
+/**
+ * Telas de tamanho pequeno/médio
+ * ref code: sm
+ * range: Celulares maiores e Tablet's (600px > < 960px)
+ */
+@media (min-width: 600px) {
   .home-view-container {
     width: 100%;
-    max-width: 768px;
     margin: 0 auto;
   }
   .main-title {
@@ -489,12 +493,12 @@ export default {
   }
 }
 
-/** Responsividade para telas até 1366px (Notebooks/telas HD) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .home-view-container {
-    width: 100%;
-    max-width: 1024px;
-  }
+/**
+ * Telas de tamanho médio
+ * ref code: md
+ * range: Tablet's maiores e Notebook's HD- (960px > < 1264px)
+ */
+@media (min-width: 960px) {
   .section-content {
     padding: 0 3rem;
     gap: 2rem;
@@ -599,13 +603,14 @@ export default {
   }
 }
 
-/** Responsividade para telas até 1366px (Notebooks/telas HD+) */
-@media (min-width: 1025px) and (max-width: 1367px) {
-  .home-view-container {
-    width: 100%;
-    max-width: 1366px;
-  }
+/**
+ * Telas de tamanho grande
+ * ref code: lg
+ * range: Notebooks e TV's menores (1264px > < 1904px)
+ */
+@media (min-width: 1264px) {
   .section-content {
+    max-width: 1200px;
     padding: 0 3rem;
     gap: 2rem;
   }
@@ -673,21 +678,12 @@ export default {
     width: 30rem;
   }
 }
+/**
+ * Telas de tamanho extra grande
+ * ref code: xl
+ * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
+ */
+@media (min-width: 1904px) {
 
-/** Responsividade para telas até 1920px (Notebooks/telas FHD) */
-@media(min-width: 1367px) and (max-width: 1920px) {
-  .home-view-container {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-  }
-}
-
-/** Responsividade para telas maiores que 1920px (Notebooks/telas FHD+) */
-@media(min-width: 1921px) {
-  .home-view-container {
-    width: 100%;
-    margin: 0 auto;
-  }
 }
 </style>
