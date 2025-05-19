@@ -1,172 +1,184 @@
 <template>
   <div class="home-view-container">
     <div class="home-content">
-      <section class="section-content bg-img-01">
-        <div class="text-box">
-          <h1 class="main-title">Descubra Como Cuidar da Sua Saúde e Lidar Com a Enxaqueca</h1>
-          <p class="paragraph-text">Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
-          <p class="paragraph-text">Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
+      <div class="bg-img-01">
+        <section class="section-content">
+          <div class="text-box">
+            <h1 class="main-title">Descubra Como Cuidar da Sua Saúde e Lidar Com a Enxaqueca</h1>
+            <p class="paragraph-text">Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
+            <p class="paragraph-text">Se você convive com enxaqueca, já passou da hora de entender os sinais que seu corpo dá e agir antes que a dor tome conta.</p>
+            <div class="btn-input">
+              <sall-button
+                :btnTextValue="label.btnSec1"
+                :btnBgColor="colorBtn.btnSec1"
+              />
+            </div>
+          </div>
+          <div class="image-box">
+            <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
+            <div class="image-box-icon">
+              <span>
+                <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat/>
+              </span>
+              <span>
+                <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat/>
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="bg-black">
+        <section class="section-content">
+          <h2 class="section-title text-white">O Que Você Vai Aprender:</h2>
+          <div class="simple-tip-card-box">
+            <simple-tip-card
+              v-for="(card, index) in tipCards"
+              :key="index"
+              :iconName="card.iconName"
+              :textCard="card.textCard"
+            />
+          </div>
+        </section>
+      </div>
+      <div class="bg-green">
+        <section class="section-content">
+          <h2 class="section-title">Pare de Cair Nas Ciladas dos "Gurus de Internet"</h2>
+          <div class="quote-card-box">
+            <quote-card
+              v-for="(card, index) in quoteCards"
+              :key="index"
+              :textCard="card.textCard"
+            />
+            <p class="paragraph-text text-white">
+              Você não precisa de mais palpites sem fundamento.
+              Precisa de conhecimento claro, direto e confiável para cuidar melhor de si.
+            </p>
+            <img src="../assets/images/hand-drawn-life-coaching-illustration.png" alt="pessoa aconselhando outra">
+          </div>
+        </section>
+      </div>
+      <div class="bg-img-02">
+        <section class="section-content">
+          <h2 class="section-title">A Verdade Que Ninguém Conta:</h2>
+          <p class="paragraph-text">
+            A enxaqueca não é só uma questão de "tomar remédio".
+            Ela envolve entender como <span class="text-emphasis">alimentação, sono, estresse e emoções</span> influenciam sua saúde
+          </p>
+          <p class="paragraph-text">
+            <span class="text-emphasis">O problema?</span>
+            Muitas vezes, você sai da consulta com uma prescrição genérica e sem orientação clara.
+          </p>
+          <p class="paragraph-text">
+            Mas com as <span class="text-emphasis">estratégias certas</span>, você pode começar a transformar sua relação com essas dores.
+          </p>
+          <p class="paragraph-text">
+            Pegue agora as informações essenciais para:
+          </p>
+          <div class="bullet-container">
+            <div class="bullet-box">
+              <bullet-item
+                v-for="(item, index) in bulletItems1"
+                :key="index"
+                :text="item.text"
+              />
+            </div>
+            <div class="bullet-img">
+              <img src="../assets/images/woman-doctor-pointer.png" alt="Medica apontando para esquerda">
+            </div>
+          </div>
+          <p class="paragraph-text">
+            Dê o primeiro passo para viver sem se sentir refém da dor.
+          </p>
           <div class="btn-input">
-            <sall-button
-              :btnTextValue="label.btnSec1"
+            <sall-button 
+              :btnTextValue="label.btnSec2"
               :btnBgColor="colorBtn.btnSec1"
             />
           </div>
-        </div>
-        <div class="image-box">
-          <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
-          <div class="image-box-icon">
-            <span>
-              <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat/>
-            </span>
-            <span>
-              <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat/>
-            </span>
+        </section>
+      </div>
+      <div class="bg-black">
+        <section class="section-content">
+          <div class="title-with-icon">
+            <font-awesome-icon :icon="['fas', 'clipboard-list']" size="3x" style="color: #FA7F59;" />
+            <h2 class="section-title text-white">O QUE VOCÊ ENCONTRARÁ NO EBOOK</h2>
           </div>
-        </div>
-      </section>
-      <section class="section-content bg-black">
-        <h2 class="section-title text-white">O Que Você Vai Aprender:</h2>
-        <div class="simple-tip-card-box">
-          <simple-tip-card
-            v-for="(card, index) in tipCards"
-            :key="index"
-            :iconName="card.iconName"
-            :textCard="card.textCard"
-          />
-        </div>
-      </section>
-      <section class="section-content bg-green">
-        <h2 class="section-title">Pare de Cair Nas Ciladas dos "Gurus de Internet"</h2>
-        <div class="quote-card-box">
-          <quote-card
-            v-for="(card, index) in quoteCards"
-            :key="index"
-            :textCard="card.textCard"
-          />
-          <p class="paragraph-text text-white">
-            Você não precisa de mais palpites sem fundamento.
-            Precisa de conhecimento claro, direto e confiável para cuidar melhor de si.
-          </p>
-          <img src="../assets/images/hand-drawn-life-coaching-illustration.png" alt="pessoa aconselhando outra">
-        </div>
-      </section>
-      <section class="section-content bg-img-02">
-        <h2 class="section-title">A Verdade Que Ninguém Conta:</h2>
-        <p class="paragraph-text">
-          A enxaqueca não é só uma questão de "tomar remédio".
-          Ela envolve entender como <span class="text-emphasis">alimentação, sono, estresse e emoções</span> influenciam sua saúde
-        </p>
-        <p class="paragraph-text">
-          <span class="text-emphasis">O problema?</span>
-          Muitas vezes, você sai da consulta com uma prescrição genérica e sem orientação clara.
-        </p>
-        <p class="paragraph-text">
-          Mas com as <span class="text-emphasis">estratégias certas</span>, você pode começar a transformar sua relação com essas dores.
-        </p>
-        <p class="paragraph-text">
-          Pegue agora as informações essenciais para:
-        </p>
-        <div class="bullet-container">
+          <div class="summary-container">
+            <div class="summary-box">
+              <summary-mock/>
+            </div>
+            <div class="summary-img">
+              <img class="mock-img" src="../assets/images/mock-agrupado.png" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
+            </div>
+          </div>
+          <h2 class="section-title text-white">PARA QUEM SERVE ESSE EBOOK?</h2>
           <div class="bullet-box">
             <bullet-item
-              v-for="(item, index) in bulletItems1"
+              v-for="(item, index) in bulletItems2"
               :key="index"
               :text="item.text"
             />
           </div>
-          <div class="bullet-img">
-            <img src="../assets/images/woman-doctor-pointer.png" alt="Medica apontando para esquerda">
-          </div>
-        </div>
-        <p class="paragraph-text">
-          Dê o primeiro passo para viver sem se sentir refém da dor.
-        </p>
-        <div class="btn-input">
-          <sall-button 
-            :btnTextValue="label.btnSec2"
-            :btnBgColor="colorBtn.btnSec1"
-          />
-        </div>
-      </section>
-      <section class="section-content bg-black">
-        <div class="title-with-icon">
-          <font-awesome-icon :icon="['fas', 'clipboard-list']" size="3x" style="color: #FA7F59;" />
-          <h2 class="section-title text-white">O QUE VOCÊ ENCONTRARÁ NO EBOOK</h2>
-        </div>
-        <div class="summary-container">
-          <div class="summary-box">
-            <summary-mock/>
-          </div>
-          <div class="summary-img">
-            <img class="mock-img" src="../assets/images/mock-agrupado.png" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
-          </div>
-        </div>
-        <h2 class="section-title text-white">PARA QUEM SERVE ESSE EBOOK?</h2>
-        <div class="bullet-box">
-          <bullet-item
-            v-for="(item, index) in bulletItems2"
-            :key="index"
-            :text="item.text"
-          />
-        </div>
-        <div class="feedback-section">
-          <div class="feedback-section-title">
-            <div class="feedback-star-icon">
-              <font-awesome-icon
-                v-for="i in 5" :key="i"
-                :icon="['fas', 'star']"
-              />
+          <div class="feedback-section">
+            <div class="feedback-section-title">
+              <div class="feedback-star-icon">
+                <font-awesome-icon
+                  v-for="i in 5" :key="i"
+                  :icon="['fas', 'star']"
+                />
+              </div>
+              <h2 class="text-white">Estas são as avaliações de quem já adquiriu este e-book e aprendeu a lidar com a enxaqueca</h2>
             </div>
-            <h2 class="text-white">Estas são as avaliações de quem já adquiriu este e-book e aprendeu a lidar com a enxaqueca</h2>
+            <feedback-card
+              v-for="(card, index) in feedbackCards"
+              :key="index"
+              :rating="card.rating"
+              :user-name="card.userName"
+              :feedback="card.feedback"
+            />
           </div>
-          <feedback-card
-            v-for="(card, index) in feedbackCards"
-            :key="index"
-            :rating="card.rating"
-            :user-name="card.userName"
-            :feedback="card.feedback"
-          />
-        </div>
-        <div class="btn-input">
-          <sall-button 
-            :btnTextValue="label.btnSec3"
-            :btnBgColor="colorBtn.btnSec2"
-          />
-        </div>
-      </section>
-      <section class="section-content bg-green">
-        <h2 class="section-title text-white">ABA DE AUTORIDADE</h2>
-        <div>
-          PREENCHER COM DADOS ESTATÍSTICOS DOS BENEFÍCIOS GERADOS PELAS FONTES USADAS NA PRODUÇÃO DO MATERIAL
-        </div>
-      </section>
-      <section class="section-content bg-img-02">
-        <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
-        <div class="benefits-container">
-          <div class="benefits-gif">
-            <img class="mock-gif" src="../assets/images/mockup-gif.gif" alt="">
+          <div class="btn-input">
+            <sall-button 
+              :btnTextValue="label.btnSec3"
+              :btnBgColor="colorBtn.btnSec2"
+            />
           </div>
-          <benefits-card />
-        </div>
-        <div class="price-box">
+        </section>
+      </div>
+      <div class="bg-green">
+        <section class="section-content">
+          <h2 class="section-title text-white">ABA DE AUTORIDADE</h2>
           <div>
-            <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK</p>
-            <p class="paragraph-text"><span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+            PREENCHER COM DADOS ESTATÍSTICOS DOS BENEFÍCIOS GERADOS PELAS FONTES USADAS NA PRODUÇÃO DO MATERIAL
           </div>
-          <img src="../assets/images/price-descount.png" alt="Etiqueta de preço com desconto">
-        </div>
-        <div class="btn-input">
-          <sall-button 
-            :btnTextValue="label.btnSec4"
-            :btnBgColor="colorBtn.btnSec3"
-          />
-        </div>
-      </section>
+        </section>
+      </div>
+      <div class="bg-img-02">
+        <section class="section-content">
+          <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
+          <div class="benefits-container">
+            <div class="benefits-gif">
+              <img class="mock-gif" src="../assets/images/mockup-gif.gif" alt="">
+            </div>
+            <benefits-card />
+          </div>
+          <div class="price-box">
+            <div>
+              <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK</p>
+              <p class="paragraph-text"><span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+            </div>
+            <img src="../assets/images/price-descount.png" alt="Etiqueta de preço com desconto">
+          </div>
+          <div class="btn-input">
+            <sall-button 
+              :btnTextValue="label.btnSec4"
+              :btnBgColor="colorBtn.btnSec3"
+            />
+          </div>
+        </section>
+      </div>
     </div>
-    <div class="footer-content bg-black">
-      <p class="text-white">Copyright © 2025 Todos os direitos reservados | Desenvolvido por <a :href="github" class="text-white" target="_blank">Lucas Costa</a></p>
-    </div>
+    <FooterPage></FooterPage>
   </div>
 </template>
 
@@ -178,6 +190,7 @@ import BulletItem from '@/components/BulletItem.vue';
 import SummaryMock from '@/components/SummaryMock.vue';
 import FeedbackCard from '@/components/FeedbackCard.vue';
 import BenefitsCard from '@/components/BenefitsCards.vue';
+import FooterPage from '@/components/FooterPage.vue';
 /**
  * Responsável por organizar todo o conteúdo da landing page
  */
@@ -190,7 +203,8 @@ export default {
       BulletItem,
       SummaryMock,
       FeedbackCard,
-      BenefitsCard
+      BenefitsCard,
+      FooterPage
     },
     data() {
         return {
@@ -271,8 +285,7 @@ export default {
               userName: 'Jéssica Muniz',
               feedback: 'Gostei bastante da parte dos conhecimentos para autoavaliação. Isso tem melhorado minha relação com a enxaqueca.'
             },
-          ],
-          github: 'https://github.com/LucasCosta0117'
+          ]
         }
     }
 
@@ -310,6 +323,7 @@ export default {
   flex-direction: column;
   padding: 0 1.25rem;
   gap: 1rem;
+  max-width: 1280px;
 }
 .main-title {
   font-size: 2.25rem;
@@ -433,13 +447,6 @@ export default {
 }
 .price-box img {
   width: 100%;
-}
-.footer-content {
-  width: 100%;
-  height: 4rem;
-  background: linear-gradient(180deg,rgb(88, 88, 88) 0%, rgba(0, 0, 0, 1) 50%);
-  padding: 1rem;
-  text-align: center;
 }
 
 /** Responsividade para telas até 768px (Tabletes) */
