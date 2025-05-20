@@ -2,7 +2,7 @@
   <div class="home-view-container">
     <div class="home-content">
       <div class="bg-img-01">
-        <section class="section-content">
+        <section class="section-content section-one">
           <div class="text-box">
             <h1 class="main-title">Descubra Como Cuidar da Sua Saúde e Lidar Com a Enxaqueca</h1>
             <p class="paragraph-text">Chega de sofrer com dores que interrompem sua rotina e tiram o prazer das coisas simples do dia a dia.</p>
@@ -222,7 +222,7 @@ export default {
            */
           colorBtn: {
             btnSec1: '#007d48',
-            btnSec2: '#0917c1',
+            btnSec2: '#007edb',
             btnSec3: '#de0000'
           },
           tipCards: [
@@ -322,25 +322,24 @@ export default {
   flex-direction: column;
   padding: 0 1.25rem;
   gap: 1rem;
-  max-width: 1280px;
-}
-.main-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin: 1.5rem 0;
-}
-.section-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-top: 1rem;
 }
 .text-box {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+.main-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
 .paragraph-text {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 .title-with-icon {
@@ -426,8 +425,8 @@ export default {
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 60%;
   text-align: center;
+  padding: 0 1rem;
   gap: 1rem;
 }
 .feedback-star-icon {
@@ -456,43 +455,30 @@ export default {
  * range: Celulares maiores e Tablet's (600px > < 960px)
  */
 @media (min-width: 600px) {
-  .home-view-container {
-    width: 100%;
-    margin: 0 auto;
-  }
   .main-title {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
   .section-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .paragraph-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .image-box img {
-    width: 80%;
+    width: 50%;
   }
   .image-box-icon {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     position: absolute;
-    top: 10%;
-    left: 35%;
+    left: 40%;
   }
   .image-box-icon span:first-of-type{
-    padding-right: 4rem;
+    padding-right: 2.5rem;
   }
-  .price-box {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 1.5rem;
-  }
-  .price-box img {
-    width: 20rem;
+  .feedback-section-title {
+    width: 85%;
   }
 }
-
 /**
  * Telas de tamanho médio
  * ref code: md
@@ -501,108 +487,27 @@ export default {
 @media (min-width: 960px) {
   .section-content {
     padding: 0 3rem;
-    gap: 2rem;
   }
-  .main-title {
-    font-size: 3.25rem;
-    margin: 3rem 0;
+  .section-one {
+    flex-direction: row;
   }
-  .section-title {
-    font-size: 2rem;
-    margin-top: 2rem;
-  }
-  .paragraph-text {
-    font-size: 1.5rem;
+  .image-box {
+    align-items: end;
+    justify-content: start;
   }
   .image-box img {
-    position: relative;
-    left: 10%;
-    width: 25%;
+    width: 65%;
   }
   .image-box-icon {
+    font-size: 1rem;
     position: absolute;
-    top: 12%;
-    left: 55%;
+    left: 20%;
+    top: 50%;
   }
   .image-box-icon span:first-of-type{
-    padding-right: 1.75rem;
-  }
-  .text-box {
-    width: 75%;
-  }
-  .simple-tip-card-box {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    gap: 2rem;
-  }
-  .quote-card-box {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    gap: 1rem;
-  }
-  .quote-card-box img {
-    width: 50%;
-  }
-  .bullet-container {
-    align-items: center;
-  }
-  .bullet-container .bullet-box {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 70%;
-  } 
-  .bullet-container .bullet-img {
-    display: flex;
-    justify-content: end;
-    width: 30%;
-  }
-  .bullet-container .bullet-img img {
-    width: 20rem;
-  }
-  .summary-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-  }
-  .summary-img {
-    display: block;
-  }
-  .mock-img {
-    width: 42rem;
-    height: auto;
-  }
-  .benefits-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .benefits-gif {
-    display: block;
-  }
-  .mock-gif {
-    width: 15rem;
-    height: auto;
-    border-radius: 1rem;
-    margin-left: 2rem;
-  }
-  .price-box {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 1rem;
-    margin: 1.5rem;
-  }
-  .price-box img {
-    width: 20rem;
+    padding-right: 2rem;
   }
 }
-
 /**
  * Telas de tamanho grande
  * ref code: lg

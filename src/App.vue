@@ -16,6 +16,7 @@ export default {
 <style>
 #app {
   font-family: 'Rajdhani', Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

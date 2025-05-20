@@ -49,15 +49,24 @@ export default {
     font-weight: 500;
 }
 
-/** Responsividade para telas até 768px (Tabletes) */
-@media(min-width: 481px) and (max-width: 768px) {
+/* Responsividade - Aplicado o Material Design Breakpoints */
+
+/**
+ * Telas de tamanho pequeno/médio
+ * ref code: sm
+ * range: Celulares maiores e Tablet's (600px > < 960px)
+ */
+@media (min-width: 600px) {
   .summary-list:only-child {
     font-size: 1.25rem;
   }
 }
-
-/** Responsividade para telas até 1024px (Tablets/Notebooks/telas HD) */
-@media (min-width: 769px) and (max-width: 1024px) {
+/**
+ * Telas de tamanho médio
+ * ref code: md
+ * range: Tablet's maiores e Notebook's HD- (960px > < 1264px)
+ */
+@media (min-width: 960px) {
     .summary-mock-container {
         width: 30rem;
     }
@@ -65,14 +74,25 @@ export default {
     font-size: 1.25rem;
   }
 }
-
-/** Responsividade para telas até 1366px (Notebooks/telas HD+) */
-@media (min-width: 1025px) and (max-width: 1366px) {
+/**
+ * Telas de tamanho grande
+ * ref code: lg
+ * range: Notebooks e TV's menores (1264px > < 1904px)
+ */
+@media (min-width: 1264px) {
     .summary-mock-container {
         width: 40rem;
     }
     .summary-list:only-child {
     font-size: 1.25rem;
     }
+}
+/**
+ * Telas de tamanho extra grande
+ * ref code: xl
+ * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
+ */
+@media (min-width: 1904px) {
+
 }
 </style>
