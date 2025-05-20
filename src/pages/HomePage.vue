@@ -163,17 +163,21 @@
             <benefits-card />
           </div>
           <div class="price-box">
-            <div>
-              <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK</p>
-              <p class="paragraph-text"><span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+            <div class="price-box-img">
+              <img src="../assets/images/price-descount.png" alt="Etiqueta de preço com desconto">
             </div>
-            <img src="../assets/images/price-descount.png" alt="Etiqueta de preço com desconto">
-          </div>
-          <div class="btn-input">
-            <sall-button 
-              :btnTextValue="label.btnSec4"
-              :btnBgColor="colorBtn.btnSec3"
-            />
+            <div class="price-box-info">
+              <div>
+                <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK</p>
+                <p class="paragraph-text"><span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+              </div>
+              <div class="btn-input">
+                <sall-button 
+                  :btnTextValue="label.btnSec4"
+                  :btnBgColor="colorBtn.btnSec3"
+                />
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -439,11 +443,10 @@ export default {
 .price-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+  margin: 1rem 0;
+  gap: 1rem;
 }
-.price-box img {
+.price-box-img img {
   width: 100%;
 }
 
@@ -455,6 +458,9 @@ export default {
  * range: Celulares maiores e Tablet's (600px > < 960px)
  */
 @media (min-width: 600px) {
+  .section-content {
+    padding: 0 2rem;
+  }
   .main-title {
     font-size: 2.5rem;
   }
@@ -478,6 +484,12 @@ export default {
   .feedback-section-title {
     width: 85%;
   }
+  .price-box {
+    flex-direction: row-reverse;
+  }
+  .price-box-info {
+    width: 100%;
+  }
 }
 /**
  * Telas de tamanho médio
@@ -485,9 +497,6 @@ export default {
  * range: Tablet's maiores e Notebook's HD- (960px > < 1264px)
  */
 @media (min-width: 960px) {
-  .section-content {
-    padding: 0 3rem;
-  }
   .section-one {
     flex-direction: row;
   }

@@ -59,7 +59,7 @@ export default {
     border-radius: 0.5rem;
     padding: 1rem;
     width: 100%;
-    height: 8rem;
+    height: 6rem;
 }
 .quote-card-icon {
     display: flex;
@@ -70,7 +70,7 @@ export default {
     width: 20%;
 }
 .quote-card-text {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 400;
     padding-right: 1rem;
     text-align: right;
@@ -86,7 +86,7 @@ export default {
  */
 @media (min-width: 600px) {
   .quote-card-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 /**
