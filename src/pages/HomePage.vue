@@ -638,5 +638,34 @@ export default {
  * ref code: xl
  * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
  */
-@media (min-width: 1904px) {}
+@media (min-width: 1904px) {
+  .section-content {
+    width: 1440px;
+    min-height: 40rem;
+  }
+  .section-one .btn-input {
+    margin-top: 10rem;
+  }
+  .image-box img {
+    position: relative;
+    left: 52rem;
+    top: 13.7rem;
+    width: 30rem;
+  }
+  .image-box-icon {
+    font-size: 1.375rem;
+    position: relative;
+    left: 32.5rem;
+    top: 17.5rem;
+  }
+  .image-box-icon span:first-of-type{
+    padding-right: 3rem;
+  }
+  .text-box {
+    width: 50%;
+  }
+  .section-title {
+    margin: 3rem 0;
+  }
+}
 </style>
