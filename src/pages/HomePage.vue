@@ -15,7 +15,7 @@
             </div>
           </div>
           <div class="image-box">
-            <img src="../assets/images/woman-headache.png" alt="Mulher com as mãos na cabeça">
+            <img src="../assets/images/woman-headache.webp" alt="Mulher com as mãos na cabeça">
             <div class="image-box-icon">
               <span>
                 <font-awesome-icon icon="fa-solid fa-circle" size="2x" beat/>
@@ -44,16 +44,18 @@
         <section class="section-content">
           <h2 class="section-title">Pare de Cair Nas Ciladas dos "Gurus de Internet"</h2>
           <div class="quote-card-box">
-            <quote-card
-              v-for="(card, index) in quoteCards"
-              :key="index"
-              :textCard="card.textCard"
-            />
+            <div class="quote-card-components">
+              <quote-card
+                v-for="(card, index) in quoteCards"
+                :key="index"
+                :textCard="card.textCard"
+              />
+            </div>
             <p class="paragraph-text text-white">
               Você não precisa de mais palpites sem fundamento.
               Precisa de conhecimento claro, direto e confiável para cuidar melhor de si.
             </p>
-            <img src="../assets/images/hand-drawn-life-coaching-illustration.png" alt="pessoa aconselhando outra">
+            <img src="../assets/images/hand-drawn-life-coaching-illustration.webp" alt="pessoa aconselhando outra">
           </div>
         </section>
       </div>
@@ -83,7 +85,7 @@
               />
             </div>
             <div class="bullet-img">
-              <img src="../assets/images/woman-doctor-pointer.png" alt="Medica apontando para esquerda">
+              <img src="../assets/images/woman-doctor-pointer.webp" alt="Medica apontando para esquerda">
             </div>
           </div>
           <p class="paragraph-text">
@@ -108,7 +110,7 @@
               <summary-mock/>
             </div>
             <div class="summary-img">
-              <img class="mock-img" src="../assets/images/mock-agrupado.png" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
+              <img class="mock-img" src="../assets/images/mock-agrupado.webp" alt="Diferentes aparelhos eletronicos exibindo o e-book em suas telas">
             </div>
           </div>
           <h2 class="section-title text-white">PARA QUEM SERVE ESSE EBOOK?</h2>
@@ -157,25 +159,24 @@
         <section class="section-content">
           <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
           <div class="benefits-container">
-            <div class="benefits-gif">
-              <img class="mock-gif" src="../assets/images/mockup-gif.gif" alt="">
+            <div>
+              <benefits-card />
             </div>
-            <benefits-card />
-          </div>
-          <div class="price-box">
-            <div class="price-box-img">
-              <img src="../assets/images/price-descount.png" alt="Etiqueta de preço com desconto">
-            </div>
-            <div class="price-box-info">
-              <div>
-                <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK</p>
-                <p class="paragraph-text"><span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+            <div class="price-box">
+              <div class="price-box-img">
+                <img src="../assets/images/price-descount.png" alt="Etiqueta de preço com desconto">
               </div>
-              <div class="btn-input">
-                <sall-button 
-                  :btnTextValue="label.btnSec4"
-                  :btnBgColor="colorBtn.btnSec3"
-                />
+              <div class="price-box-info">
+                <div>
+                  <p class="paragraph-text">ADIQUIRA AGORA MESMO O EBOOK</p>
+                  <p class="paragraph-text"><span class="text-emphasis">“COMO LIDAR COM A ENXAQUECA”</span>!</p>
+                </div>
+                <div class="btn-input">
+                  <sall-button
+                    :btnTextValue="label.btnSec4"
+                    :btnBgColor="colorBtn.btnSec3"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -302,13 +303,13 @@ export default {
   margin: 0 auto;
 }
 .bg-img-01 {
-  background-image: url('../assets/images/bg-01.png');
+  background-image: url('../assets/images/bg-01.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .bg-img-02 {
-  background-image: url('../assets/images/bg-02.png');
+  background-image: url('../assets/images/bg-02.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -397,6 +398,11 @@ export default {
   gap: 2rem;
   margin-bottom: 1rem;
 }
+.quote-card-components {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .quote-card-box img {
   width: 70%;
 }
@@ -404,7 +410,7 @@ export default {
   display: flex;
   flex-direction: row;
 }
-.bullet-container .bullet-img {
+.bullet-img {
   display: none;
 }
 .bullet-box {
@@ -437,13 +443,10 @@ export default {
   font-size: 1.75rem;
   color: rgb(230, 197, 15);
 }
-.benefits-gif {
-  display: none;
-}
 .price-box {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  margin: 2rem 0;
   gap: 1rem;
 }
 .price-box-img img {
@@ -481,14 +484,26 @@ export default {
   .image-box-icon span:first-of-type{
     padding-right: 2.5rem;
   }
+  .quote-card-components {
+    flex-direction: row;
+  }
   .feedback-section-title {
-    width: 85%;
+    width: 33rem;
   }
   .price-box {
     flex-direction: row-reverse;
+    align-items: end;
   }
   .price-box-info {
-    width: 100%;
+    width: 50%;
+  }
+  .price-box-img {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+  }
+  .price-box-img img {
+    width: 20rem;
   }
 }
 /**
@@ -510,11 +525,56 @@ export default {
   .image-box-icon {
     font-size: 1rem;
     position: absolute;
-    left: 20%;
-    top: 50%;
+    left: 21%;
+    top: 45%;
   }
   .image-box-icon span:first-of-type{
     padding-right: 2rem;
+  }
+  .simple-tip-card-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .bullet-container {
+    align-items: center;
+  }
+  .bullet-img {
+    display: flex;
+    justify-content: end;
+    width: 30%;
+  }
+  .bullet-img img {
+    width: 20rem;
+  }
+  .summary-container {
+    display: flex;
+    gap: 2rem;
+  }
+  .summary-img {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .summary-img img {
+    height: 30rem;
+  }
+  .benefits-container {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .price-box {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .price-box-info {
+    width: 100%;
+    margin: 0 -2rem;
+  }
+  .price-box-img img {
+    width: 25rem;
   }
 }
 /**

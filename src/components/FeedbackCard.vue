@@ -126,7 +126,7 @@ export default {
  */
 @media (min-width: 960px) {
   .feedback-card-container {
-    width: 25rem;
+    width: 30rem;
   }
   .feedback-rating .name-user {
     font-size: 1.25rem;

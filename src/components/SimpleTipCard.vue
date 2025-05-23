@@ -71,16 +71,17 @@ export default {
     background-color: #ffffff;
     border-radius: 0.5rem;
     padding: 1rem;
-    width: 100%;
     height: 12rem;
 }
-
+.tip-card-container:hover {
+    scale: 1.05;
+    transition: scale 0.3s linear;
+}
 .tip-card-icon {
     display: flex;
     align-items: center;
     height: 50%;
 }
-
 .tip-card-text {
     font-size: 1.125rem;
     font-weight: 400;
@@ -108,12 +109,7 @@ export default {
  */
 @media (min-width: 960px) {
     .tip-card-container {
-        height: 18rem;
-        width: 60%;
-    }
-    .tip-card-container:hover {
-        scale: 1.05;
-        transition: scale 0.3s linear;
+        width: 48%;
     }
 }
 

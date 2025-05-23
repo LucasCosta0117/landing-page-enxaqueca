@@ -95,10 +95,6 @@ export default {
  * range: Tablet's maiores e Notebook's HD- (960px > < 1264px)
  */
 @media (min-width: 960px) {
-    .quote-card-container {
-        height: 5rem;
-        width: 49%;
-    }
     .quote-card-container:hover {
         scale: 0.98;
         transition: scale 0.2s linear;
