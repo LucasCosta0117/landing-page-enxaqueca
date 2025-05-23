@@ -70,12 +70,8 @@ export default {
     align-items: center;
     background-color: #ffffff;
     border-radius: 0.5rem;
-    padding: 1rem;
-    height: 12rem;
-}
-.tip-card-container:hover {
-    scale: 1.05;
-    transition: scale 0.3s linear;
+    height: 10rem;
+    padding: 0 2rem;
 }
 .tip-card-icon {
     display: flex;
@@ -83,9 +79,7 @@ export default {
     height: 50%;
 }
 .tip-card-text {
-    font-size: 1.125rem;
     font-weight: 400;
-    margin-top: 1rem;
     text-align: center;
 }
 
@@ -98,7 +92,7 @@ export default {
  */
 @media (min-width: 600px) {
     .tip-card-text {
-        font-size: 1.25rem;
+      font-size: 1.125rem;
     }
 }
 
@@ -109,7 +103,11 @@ export default {
  */
 @media (min-width: 960px) {
     .tip-card-container {
-        width: 48%;
+        width: 49%;
+    }
+    .tip-card-container:hover {
+      scale: 1.05;
+      transition: scale 0.3s linear;
     }
 }
 
@@ -120,13 +118,7 @@ export default {
  */
 @media (min-width: 1264px) {
     .tip-card-container {
-        height: 18rem;
-        width: 48%;
-    }
-
-    .tip-card-container:hover {
-        scale: 1.05;
-        transition: scale 0.5s linear;
+        width: 32%;
     }
 }
 
@@ -135,7 +127,5 @@ export default {
  * ref code: xl
  * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
  */
-@media (min-width: 1904px) {
-    
-}
+@media (min-width: 1904px) {}
 </style>

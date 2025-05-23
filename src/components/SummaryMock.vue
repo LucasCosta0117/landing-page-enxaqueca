@@ -92,7 +92,5 @@ export default {
  * ref code: xl
  * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
  */
-@media (min-width: 1904px) {
-
-}
+@media (min-width: 1904px) {}
 </style>

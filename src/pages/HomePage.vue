@@ -1,7 +1,7 @@
 <template>
   <div class="home-view-container">
     <div class="home-content">
-      <div class="bg-img-01">
+      <div class="section-container bg-img-01">
         <section class="section-content section-one">
           <div class="text-box">
             <h1 class="main-title">Descubra Como Cuidar da Sua Saúde e Lidar Com a Enxaqueca</h1>
@@ -27,7 +27,7 @@
           </div>
         </section>
       </div>
-      <div class="bg-black">
+      <div class="section-container bg-black">
         <section class="section-content">
           <h2 class="section-title text-white">O Que Você Vai Aprender:</h2>
           <div class="simple-tip-card-box">
@@ -40,7 +40,7 @@
           </div>
         </section>
       </div>
-      <div class="bg-green">
+      <div class="section-container bg-green">
         <section class="section-content">
           <h2 class="section-title">Pare de Cair Nas Ciladas dos "Gurus de Internet"</h2>
           <div class="quote-card-box">
@@ -59,7 +59,7 @@
           </div>
         </section>
       </div>
-      <div class="bg-img-02">
+      <div class="section-container bg-img-02">
         <section class="section-content">
           <h2 class="section-title">A Verdade Que Ninguém Conta:</h2>
           <p class="paragraph-text">
@@ -88,9 +88,6 @@
               <img src="../assets/images/woman-doctor-pointer.webp" alt="Medica apontando para esquerda">
             </div>
           </div>
-          <p class="paragraph-text">
-            Dê o primeiro passo para viver sem se sentir refém da dor.
-          </p>
           <div class="btn-input">
             <sall-button 
               :btnTextValue="label.btnSec2"
@@ -99,7 +96,7 @@
           </div>
         </section>
       </div>
-      <div class="bg-black">
+      <div class="section-container bg-black">
         <section class="section-content">
           <div class="title-with-icon">
             <font-awesome-icon :icon="['fas', 'clipboard-list']" size="3x" style="color: #FA7F59;" />
@@ -147,7 +144,7 @@
           </div>
         </section>
       </div>
-      <div class="bg-green">
+      <div class="section-container bg-green">
         <section class="section-content">
           <h2 class="section-title text-white">ABA DE AUTORIDADE</h2>
           <div>
@@ -155,11 +152,11 @@
           </div>
         </section>
       </div>
-      <div class="bg-img-02">
+      <div class="section-container bg-img-02">
         <section class="section-content">
           <h2 class="section-title">BENEFÍCIOS DE SE COMPRAR O EBOOK</h2>
           <div class="benefits-container">
-            <div>
+            <div class="benefits-component">
               <benefits-card />
             </div>
             <div class="price-box">
@@ -246,6 +243,14 @@ export default {
             {
               iconName: 'fa-solid fa-stethoscope',
               textCard: 'Como identificar profissionais realmente competentes'
+            },
+            {
+              iconName: 'fa-brands fa-medrt',
+              textCard: 'Quando buscar ajuda médica'
+            },
+            {
+              iconName: 'fa-solid fa-stethoscope',
+              textCard: 'Como identificar profissionais realmente competentes'
             }
           ],
           quoteCards: [
@@ -298,10 +303,6 @@ export default {
 </script>
 
 <style scoped>
-.home-view-container {
-  width: 100%;
-  margin: 0 auto;
-}
 .bg-img-01 {
   background-image: url('../assets/images/bg-01.webp');
   background-size: cover;
@@ -316,11 +317,14 @@ export default {
 }
 .bg-black {
   background: black;
-  background: radial-gradient(circle, rgba(16, 2, 122, 1) 0%, rgba(0, 0, 0, 1) 100%);   
+  background: radial-gradient(circle, rgba(16, 2, 122, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 .bg-green {
   background-color: #007d48;
   background: radial-gradient(ellipse at bottom, rgba(130, 194, 81, 1) 0%, rgba(0, 125, 72, 1) 100%);
+}
+.section-container {
+  width: 100%;
 }
 .section-content {
   display: flex;
@@ -404,7 +408,7 @@ export default {
   gap: 2rem;
 }
 .quote-card-box img {
-  width: 70%;
+  width: 35rem;
 }
 .bullet-container {
   display: flex;
@@ -465,7 +469,7 @@ export default {
     padding: 0 2rem;
   }
   .main-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   .section-title {
     font-size: 1.75rem;
@@ -526,7 +530,7 @@ export default {
     font-size: 1rem;
     position: absolute;
     left: 21%;
-    top: 45%;
+    top: 42%;
   }
   .image-box-icon span:first-of-type{
     padding-right: 2rem;
@@ -562,7 +566,7 @@ export default {
   .benefits-container {
     display: flex;
     gap: 1rem;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
   }
   .price-box {
     flex-direction: column;
@@ -583,38 +587,36 @@ export default {
  * range: Notebooks e TV's menores (1264px > < 1904px)
  */
 @media (min-width: 1264px) {
+  .section-container {
+    display: flex;
+    justify-content: center;
+  }
   .section-content {
-    max-width: 1200px;
-    padding: 0 3rem;
+    width: 1200px;
+    padding: 0 1rem;
     gap: 2rem;
   }
-  .main-title {
-    font-size: 3.5rem;
+  .section-one {
     margin: 3rem 0;
   }
   .section-title {
-    font-size: 2.25rem;
-  }
-  .paragraph-text {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   .image-box {
     position: absolute;
+    align-items: start;
   }
   .image-box img {
     position: relative;
-    left: 46rem;
-    top: 13.1rem;
+    left: 42rem;
+    top: 7.3rem;
     width: 20rem;
   }
   .image-box-icon {
+    font-size: 1.125rem;
     position: relative;
-    font-size: 1.375rem;
-    left: 32rem;
-    top: 7rem;
-  }
-  .image-box-icon span:first-of-type{
-    padding-right: 1.75rem;
+    left: 28.5rem;
+    top: 9.5rem;
   }
   .text-box {
     width: 60%;
@@ -623,33 +625,12 @@ export default {
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 3rem;
-    gap: 2rem;
   }
-  .quote-card-box {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-    gap: 1rem;
+  .benefits-container {
+    justify-content: space-between;
   }
-  .quote-card-box img {
-    width: 50%;
-  }
-  .bullet-container {
-    align-items: center;
-  }
-  .bullet-container .bullet-box {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 70%;
-  } 
-  .bullet-container .bullet-img {
-    display: flex;
-    justify-content: end;
-    width: 30%;
-  }
-  .bullet-container .bullet-img img {
-    width: 30rem;
+  .benefits-component {
+    width: 60%;
   }
 }
 /**
@@ -657,7 +638,5 @@ export default {
  * ref code: xl
  * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
  */
-@media (min-width: 1904px) {
-
-}
+@media (min-width: 1904px) {}
 </style>

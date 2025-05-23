@@ -38,7 +38,7 @@ export default {
   background-color: #ffffff;
 }
 .text-item {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 
@@ -51,7 +51,8 @@ export default {
  */
 @media (min-width: 600px) {
   .text-item {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
 }
 /**
@@ -59,27 +60,17 @@ export default {
  * ref code: md
  * range: Tablet's maiores e Notebook's HD- (960px > < 1264px)
  */
-@media (min-width: 960px) {
-  .text-item {
-    font-size: 1.5rem;
-  }
-}
+@media (min-width: 960px) {}
 /**
  * Telas de tamanho grande
  * ref code: lg
  * range: Notebooks e TV's menores (1264px > < 1904px)
  */
-@media (min-width: 1264px) {
-  .text-item {
-    font-size: 1.75rem;
-  }
-}
+@media (min-width: 1264px) {}
 /**
  * Telas de tamanho extra grande
  * ref code: xl
  * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
  */
-@media (min-width: 1904px) {
-
-}
+@media (min-width: 1904px) {}
 </style>

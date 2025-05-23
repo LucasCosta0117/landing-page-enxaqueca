@@ -97,27 +97,17 @@ export default {
  * ref code: md
  * range: Tablet's maiores e Notebook's HD- (960px > < 1264px)
  */
-@media (min-width: 960px) {
-  .benefits-card-container {
-    width: 35rem;
-  }
-}
+@media (min-width: 960px) {}
 /**
  * Telas de tamanho grande
  * ref code: lg
  * range: Notebooks e TV's menores (1264px > < 1904px)
  */
-@media (min-width: 1264px) {
-  .benefits-card-container {
-    width: 35rem;
-  }
-}
+@media (min-width: 1264px) {}
 /**
  * Telas de tamanho extra grande
  * ref code: xl
  * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
  */
-@media (min-width: 1904px) {
-
-}
+@media (min-width: 1904px) {}
 </style>

@@ -113,20 +113,11 @@ export default {
         height: 5rem;
         width: 49%;
     }
-    .quote-card-container:hover {
-        scale: 0.98;
-        transition: scale 0.2s linear;
-    }
-    .quote-card-text {
-        font-size: 1.75rem;
-    }
 }
 /**
  * Telas de tamanho extra grande
  * ref code: xl
  * range: Notebooks FHD+ e TV's de alta resolução (> 1904px)
  */
-@media (min-width: 1904px) {
-
-}
+@media (min-width: 1904px) {}
 </style>
