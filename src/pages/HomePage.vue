@@ -619,7 +619,7 @@ export default {
     top: 9.5rem;
   }
   .text-box {
-    width: 60%;
+    width: 40rem;
   }
   .simple-tip-card-box {
     flex-direction: row;
@@ -643,8 +643,14 @@ export default {
     width: 1440px;
     min-height: 40rem;
   }
+  .main-title {
+    font-size: 2.5rem;
+  }
   .section-one .btn-input {
     margin-top: 10rem;
+  }
+  .section-one .paragraph-text {
+    font-size: 1.5rem;
   }
   .image-box img {
     position: relative;
@@ -662,7 +668,7 @@ export default {
     padding-right: 3rem;
   }
   .text-box {
-    width: 50%;
+    width: 50rem;
   }
   .section-title {
     margin: 3rem 0;
