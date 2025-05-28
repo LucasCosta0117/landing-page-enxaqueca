@@ -16,6 +16,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faArrowsDownToPeople } from '@fortawesome/free-solid-svg-icons';
 import { faStethoscope } from '@fortawesome/free-solid-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 
 library.add(
@@ -31,7 +32,8 @@ library.add(
     faUser,
     faArrowsDownToPeople,
     faStethoscope,
-    faDownload
+    faDownload,
+    faEnvelope
 );
 
 createApp(App)
