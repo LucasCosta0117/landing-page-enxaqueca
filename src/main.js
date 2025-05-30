@@ -17,6 +17,8 @@ import { faArrowsDownToPeople } from '@fortawesome/free-solid-svg-icons';
 import { faStethoscope } from '@fortawesome/free-solid-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faSeedling } from '@fortawesome/free-solid-svg-icons';
+import { faHouseMedical } from '@fortawesome/free-solid-svg-icons';
 
 
 library.add(
@@ -33,7 +35,9 @@ library.add(
     faArrowsDownToPeople,
     faStethoscope,
     faDownload,
-    faEnvelope
+    faEnvelope,
+    faSeedling,
+    faHouseMedical
 );
 
 createApp(App)

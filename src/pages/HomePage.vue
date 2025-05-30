@@ -237,25 +237,27 @@ export default {
               textCard: 'Estratégias práticas para reduzir os episódios de dor'
             },
             {
-              iconName: 'fa-brands fa-medrt',
+              iconName: 'fa-solid fa-house-medical',
               textCard: 'Quando buscar ajuda médica'
             },
             {
               iconName: 'fa-solid fa-stethoscope',
-              textCard: 'Como identificar profissionais realmente competentes'
+              textCard: 'Como diferenciar enxaqueca de outros tipos de dor de cabeça'
             },
             {
               iconName: 'fa-brands fa-medrt',
-              textCard: 'Quando buscar ajuda médica'
+              textCard: 'O papel da hidratação, sono e saúde emocional no controle da enxaqueca'
             },
             {
-              iconName: 'fa-solid fa-stethoscope',
-              textCard: 'Como identificar profissionais realmente competentes'
+              iconName: 'fa-solid fa-seedling',
+              textCard: 'Quais alimentos e hábitos podem ser gatilhos (e como evitá-los no dia a dia)'
             }
           ],
           quoteCards: [
-            { textCard: 'Toma um chá "disso", resolve!' },
-            { textCard: 'Só largar o celular que vai melhorar!' }
+            { textCard: 'Toma um chá e um café forte que resolve!' },
+            { textCard: 'Minha prima se curou com óleo essencial de lavanda!' },
+            { textCard: 'Não precisa de médico, isso é só estresse.' },
+            { textCard: 'Faz jejum, limpa tudo no corpo.' }
           ],
           bulletItems1: [
             { text: 'Reconhecer os sinais do seu corpo.' },
@@ -405,7 +407,7 @@ export default {
 .quote-card-components {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 .quote-card-box img {
   width: 35rem;
@@ -490,6 +492,8 @@ export default {
   }
   .quote-card-components {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .feedback-section-title {
     width: 33rem;
