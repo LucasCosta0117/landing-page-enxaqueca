@@ -1,6 +1,6 @@
 <template>
   <div class="sall-btn-container">
-    <a :href="seleUrl">
+    <a :href="seleUrl" target="_blank" >
       <input type="button" class="btn-input" :value="btnTextValue" />
     </a>
     <a :href="seleUrl">
@@ -43,7 +43,7 @@ export default {
         /**
          * URL para realização da compra do produto
          */
-        seleUrl: 'https://www.google.com'
+        seleUrl: 'https://pay.kiwify.com.br/K69aXFM'
       }
     }
 }
