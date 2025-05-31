@@ -146,9 +146,37 @@
       </div>
       <div class="section-container bg-green">
         <section class="section-content">
-          <h2 class="section-title text-white">ABA DE AUTORIDADE</h2>
-          <div>
-            PREENCHER COM DADOS ESTATÍSTICOS DOS BENEFÍCIOS GERADOS PELAS FONTES USADAS NA PRODUÇÃO DO MATERIAL
+          <h2 class="section-title">QUEM SOU EU</h2>
+          <div class="about-container">
+            <div class="about-info">
+              <div class="about-paragraph">
+                <p class="paragraph-text">
+                  Olá! Sou <b>Larissa Meirelles</b>, médica generalista formada pela Universidade Federal da Bahia (UFBA).
+                </p>
+                <p class="paragraph-text">
+                  Minha atuação na medicina é guiada por um princípio que considero essencial: o cuidado centrado na pessoa. Acredito que cada paciente é único e merece ser ouvido com atenção, acolhido com empatia e tratado com respeito às suas particularidades.
+                </p>
+                <p class="paragraph-text">
+                  Além da formação sólida, mantenho-me em constante atualização por meio de leitura de artigos e participação em eventos da área da saúde.
+                </p>
+                <p class="paragraph-text">
+                  Tenho uma grande paixão por transformar conhecimento técnico em orientações práticas que realmente façam diferença na vida das pessoas — e foi justamente isso que me motivou a criar este eBook sobre Enxaqueca.
+                </p>
+                <p class="paragraph-text">
+                  Se você convive com dores de cabeça frequentes e busca compreender melhor seu corpo, identificar gatilhos e encontrar formas eficazes de prevenção e alívio, este material foi feito pensando em você.
+                </p>
+              </div>
+              <div class="about-img">
+                <img src="@/assets/images/larissa-meireles.webp" alt="">
+              </div>
+            </div>
+            <div>
+              <p class="paragraph-text">
+                <b>
+                  Vamos juntos nessa jornada de autocuidado e bem-estar?
+                </b>
+              </p>
+            </div>
           </div>
         </section>
       </div>
@@ -458,7 +486,30 @@ export default {
 .price-box-img img {
   width: 100%;
 }
-
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  gap: 1.5rem;
+}
+.about-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.about-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.about-img img {
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.8rem rgba(0, 0, 0, 0.7);
+}
 /* Responsividade - Aplicado o Material Design Breakpoints */
 
 /**
@@ -512,6 +563,14 @@ export default {
   }
   .price-box-img img {
     width: 20rem;
+  }
+  .about-container {
+    padding-bottom: 1rem;
+  }
+  .about-img {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
   }
 }
 /**
@@ -636,6 +695,17 @@ export default {
   .benefits-component {
     width: 60%;
   }
+  .about-container {
+    padding-bottom: 1rem;
+  }
+  .about-info {
+    flex-direction: row-reverse;
+    align-items: start;
+    gap: 2rem;
+  }
+  .about-img {
+    width: 30rem;
+  }
 }
 /**
  * Telas de tamanho extra grande
@@ -674,8 +744,8 @@ export default {
   .text-box {
     width: 50rem;
   }
-  .section-title {
-    margin: 3rem 0;
+  .about-paragraph {
+    gap: 2rem;
   }
 }
 </style>
