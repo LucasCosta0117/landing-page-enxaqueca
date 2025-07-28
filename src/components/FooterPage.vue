@@ -11,7 +11,7 @@
         <span>Contacte-nos</span>
         <div class="contact-email">
           <font-awesome-icon :icon="['far', 'envelope']" />
-          <p>enxaqueca@salusbooks.com.br</p>
+          <p>suporte.salusbooks@gmail.com</p>
         </div>
       </div>
     </div>

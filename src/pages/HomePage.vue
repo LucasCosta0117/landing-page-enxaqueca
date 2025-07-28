@@ -316,7 +316,7 @@ export default {
               feedback: 'O E-book me trouxe muitas informações que eu ainda não sabia. Gostei muito!'
             },
             {
-              rating: 4,
+              rating: 5,
               userName: 'Iane Bárbara',
               feedback: 'Gostei de tudo, o conteúdo foi apresentado de forma clara e organizada, além de ter um visual e design de qualidade.'
             },
