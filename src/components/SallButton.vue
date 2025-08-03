@@ -43,7 +43,7 @@ export default {
         /**
          * URL para realização da compra do produto
          */
-        seleUrl: 'https://pay.kiwify.com.br/K69aXFM'
+        seleUrl: 'https://pay.kiwify.com.br/n9TDQfL'
       }
     }
 }
